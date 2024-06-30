@@ -1609,7 +1609,7 @@ opacity: 0;
   font-size: 3em;
 }
 .office_01{
-  flex: 1;
+ 
   background-image: url(/images/top04.jpg);
   padding: 200px 0px;
   background-size: cover;
@@ -1653,10 +1653,11 @@ div, figure, figucaption, img {
 }
 
 
-/*1600スマホ用*/  
+/*1600スマホ用スマホ用スマホ用スマホ用スマホ用スマホ用スマホ用スマホ用スマホ用スマホ用スマホ用スマホ用スマホ用スマホ用スマホ用*/  
 
 
 @media (max-width:750px) {
+ 
   .sp_none{
     display: none;
   }
@@ -1865,10 +1866,54 @@ background-image:none;
 
 }
 
-.office_title{
-  padding: 40px 0px;
-  color: #000;
-  font-size: 1.5em;
-  text-align: end;
+
+/*OFFICEページ */
+#office{
+  text-align: center;
 }
+
+#office .flex{
+  display:flex;
+  flex-flow: column;
+  justify-content:space-between;
+}
+
+
+.office_title{
+  padding: 50px 20px ;
+  color: #000;
+  font-size: 1.4em;
+  text-align: center;
+} 
+.office_01{
+  background-image: url(/images/top04.jpg);
+  padding: 50px 0px;
+  background-size: cover;
+}
+
+
+.office_02{
+  background-image: url(/images/top05.jpg);
+  padding: 50px 0px;
+  background-size: cover;
+}
+
+
+#office h2{
+  font-size:3em;
+  line-height:25px; 
+ color: #FFF;
+}
+#office 
+.sub_title{
+color: #FFF;
+padding: 0px;
+margin: 0px;
+}
+.office_text{
+    padding-top:10px;
+  line-height: 2em;
+  font-size: 15px;
+}
+
 }
