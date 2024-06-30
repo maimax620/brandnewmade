@@ -1597,8 +1597,7 @@ opacity: 0;
 }
 
 
-
-/*スマホ用*/  
+/*1600スマホ用*/  
 
 
 @media (max-width:750px) {
@@ -1648,7 +1647,7 @@ opacity: 0;
    /*========= FLOW===============*/
 #flow{
   background-color: var(--bg_colorbk); 
-  padding: nonr;
+  padding: none;
   color: #FFF;
   text-align: center;
   width: 100%;
@@ -1665,9 +1664,8 @@ opacity: 0;
 .flow_list{
   display: flex;
   text-align: left;
-  background-color: #333;
-  margin: 20px auto ;
-
+  margin: 0px auto ;
+  width: 85%;
 
 }
 .flow_num{
@@ -1699,7 +1697,7 @@ font-style: italic;
   left: 0;
   right: 0;
   bottom: 0;
-  width: 1px;
+  width: 0px;
   height:70%;
   margin: auto;
   background-color: white;
@@ -1714,21 +1712,23 @@ font-style: italic;
   padding: 50px 0px;
 }
 
-flow
+
 /* WORKS */
 #works{
   background-color: #39393a;
-
 }
 
 .works_content{
   color:#fff;
-  background-color: rgba( 0, 0, 0, 0.55 );
+  background-color: green;
   width: 100vw;
   opacity: 0.1; 
-  padding-top: 100px;
-
+  padding-top: 50px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 50px;
   display: block;
+
 }
 
 .works_content p{
@@ -1738,75 +1738,25 @@ flow
 
 .work_space{
   background-size: cover;
-  height: 80vh;
+  height:40vh;
   display:flex;
   filter: grayscale(1);/*モノクロ具合を変更したい場合はこの数値を変更*/
   transition: .5s ease-in-out;/*移り変わる速さを変更したい場合はこの数値を変更*/
    }
 
-   .contact_banner{
-    background-color: var(--bg_color03);
-     padding: 25px;
-     margin:50px auto;
+.gray_none{
+  filter: grayscale(0);/*モノクロ具合を変更したい場合はこの数値を変更*/
+  transition-delay:2s;
+}
+
+
+   
+.work01{
+background-image:none;
+}
+
+.work02{
+  background-image:none;
   }
 
-   *========= FLOW===============*/
-
-.works_content{
-  color:#fff;
-  background-color: rgba( 0, 0, 0, 0.55 );
-   opacity: 0.1; 
-  padding-top: 100px;
-  padding-left: 0px;
-  padding-right: 0px;
-  padding-bottom: 120px;
-
-}
-
-.works_content p{
-  font-size: 0.6em;
-}
-
-
-.work_space{
-  background-size: cover;
-  height: 80vh;
-  display:flex;
-  filter: grayscale(1);/*モノクロ具合を変更したい場合はこの数値を変更*/
-  transition: .5s ease-in-out;/*移り変わる速さを変更したい場合はこの数値を変更*/
-   }
-
-
- 
-  #slide{
-    position:absolute;
-    justify-content: center;
-    text-align: center;
-    background-color: #000000;
-     }
-
-  #slide ul{
-	position:relative;
-}
-
-#slide li{
-	position:absolute;
-	width:100%;
-} 
-.slide_img{
-  width: 100vw;
-  height: 100vh;
-}
-
-
-.slide_img01{
-    animation-name:zoom-in;
-    animation-duration:4s;
-    animation-fill-mode:forwards;
-    width: 100vw;
-    animation-delay: 1s;
-    animation-iteration-count:1;
-    height: 100vh;
-
-}  
 }
