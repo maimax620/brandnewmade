@@ -30,6 +30,7 @@ body {
   font-weight:200;
   margin: 0px  60px 0px 0px;
   padding: 0px;
+  background-color: aqua;
  
 }
 
@@ -354,7 +355,7 @@ header{
   position: relative;
   height: 100vh;
   margin: 0;
-  
+  background-color: #f1a6f3;
  }
 
 #s_top{
@@ -496,8 +497,7 @@ h2 {
 
 /* コンセプト */
 #concept{
-  background-color: #FFF;
-}
+ }
 .position{
   position: relative;
   z-index: 1;
@@ -1596,6 +1596,8 @@ opacity: 0;
   width: 30%;
 }
 
+
+
 /*スマホ用*/  
 
 
@@ -1603,6 +1605,16 @@ opacity: 0;
   .sp_none{
     display: none;
   }
+#top{
+ display: none;
+  }
+.s_top{
+  position: relative;
+  height:100vh;
+  margin: 0;
+  background-color: greenyellow;
+
+}
 
   header{
     top: 30px;
@@ -1696,12 +1708,10 @@ font-style: italic;
 }
 
 .inner{
-  max-width:430px;
   min-width: 280px;
   text-align: center;
   margin: 0px 0px;
   padding: 50px 0px;
-background-color:red;
 }
 
 flow
@@ -1765,17 +1775,6 @@ flow
   filter: grayscale(1);/*モノクロ具合を変更したい場合はこの数値を変更*/
   transition: .5s ease-in-out;/*移り変わる速さを変更したい場合はこの数値を変更*/
    }
-   /* スライダー */
-#top{
-  position: relative;
-  height:100vh;
-  margin: 0;
-  
- }
-
-#s_top{
-  display: none;
-}
 
 
  
