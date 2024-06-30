@@ -355,7 +355,7 @@ header{
   position: relative;
   height: 100vh;
   margin: 0;
-  background-color: #f1a6f3;
+  background-color:pink;
  }
 
 #s_top{
@@ -498,6 +498,8 @@ h2 {
 
 /* コンセプト */
 #concept{
+  background-color: #FFF;
+  margin: 0px auto;
  }
 .position{
   position: relative;
@@ -1639,11 +1641,6 @@ margin: 0px;
   line-height: 3em;
   font-size: 16px;
 }
-.inner{
-   width: 80%;
-   margin: auto;
- 
-}
 
 /* reset */
 div, figure, figucaption, img {
@@ -1651,7 +1648,9 @@ div, figure, figucaption, img {
   padding: 0;
   border: 0;
 }
-
+.pc_none{
+  display: none;
+}
 
 
 /*1600スマホ用*/  
@@ -1661,18 +1660,25 @@ div, figure, figucaption, img {
   .sp_none{
     display: none;
   }
+  h2 {
+    font-size: 1.8em;
+    line-height: 1.8; 
+    padding-bottom: 50px;
+    letter-spacing: 3px;
+  }
 #about h2 {
     font-size: 1.8em;
     line-height: 0.5em; 
-    padding-bottom: 10px;
+    padding-bottom: 20px;
     letter-spacing: 3px;
     color:#CCC;
   }
   .font_l{
-  font-size:1.7em;
+  font-size:1.4em;
   font-family:Hiragino Kaku Gothic W1 JIS2004 ;
-  line-height: 2em;
-  padding: 25px 0px 0px 0px;
+  line-height: 1.5em;
+  padding: 0px 0px;
+  margin: auto;
 
 }
 #top{
@@ -1805,7 +1811,7 @@ font-style: italic;
   min-width: 280px;
   text-align: center;
   margin: 0px 0px;
-  padding: 0px 0px;
+  padding:30px;
 }
 
 
