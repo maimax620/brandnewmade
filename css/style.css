@@ -30,7 +30,7 @@ body {
   font-weight:200;
   margin: 0px  60px 0px 0px;
   padding: 0px;
-  background-color: aqua;
+  background-color: none;
  
 }
 
@@ -1604,6 +1604,14 @@ opacity: 0;
   .sp_none{
     display: none;
   }
+
+  .font_l{
+  font-size:1.8em;
+  font-family:Hiragino Kaku Gothic W1 JIS2004 ;
+  line-height: 3em;
+  padding: 25px 0px 0px 0px;
+
+}
 #top{
  display: none;
   }
@@ -1635,14 +1643,6 @@ opacity: 0;
        margin: 50px 0px;
     }
 
-    .works_content{
-     
-      width: 100vw;
-      opacity: 0.1; 
-      padding: 50px;
-      background-color: pink;
-    
-        }
 
    /*========= FLOW===============*/
 #flow{
@@ -1709,18 +1709,18 @@ font-style: italic;
   min-width: 280px;
   text-align: center;
   margin: 0px 0px;
-  padding: 50px 0px;
+  padding: 0px 0px;
 }
 
 
 /* WORKS */
 #works{
-  background-color: #39393a;
+  background-color: none;
 }
 
 .works_content{
   color:#fff;
-  background-color: green;
+  background-color: none;
   width: 100vw;
   opacity: 0.1; 
   padding-top: 50px;
