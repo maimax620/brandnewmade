@@ -1,0 +1,388 @@
+@charset "UTF-8";
+
+/*物件詳細ページ */
+#about{
+  width: 100vw;
+ height: 300px;
+  background-color: var(--bg_colorbk); 
+
+ 
+}
+
+.about_header{
+position: relative;
+top: 150px;
+
+text-align: center;
+
+}
+
+.about_header h2{
+font-size: 4em;
+font-weight: bold;
+letter-spacing: 6px;
+color: #FFF;
+}
+.about_title{
+  font-size: 3em;
+font-weight: bold;
+letter-spacing: 6px;
+padding-bottom: 50px;
+
+}
+
+
+.catch {
+  display: flex;
+  align-items: center; /* 垂直中心 */
+  justify-content: center; /* 水平中心 */
+  color: #FFF;
+  }
+.catch:before, .catch:after {
+  border-top: 1px solid;
+  content: "";
+  width: 5em; /* 線の長さ */
+}
+.catch:before {
+  margin-right: 1em; /* 文字の右隣 */
+}
+.catch:after {
+  margin-left: 1em; /* 文字の左隣 */
+}
+.gaiyo{
+  padding: 50px 0px;
+  text-align: left;
+  font-size: 16px;
+}
+.gaiyo p{
+line-height: 2.5em;
+  border-bottom: solid 1px #CCCCCC;
+
+}
+
+.gaiyou_title{
+  background-color: #a9a8a8;
+  text-align: center;
+  color: #FFF;
+ margin-right: 50px;
+ letter-spacing: 2px;
+ font-size: 14px;
+ width: 150px;
+ padding: 5px 15px;
+ border-radius: 5px;
+ 
+}
+
+.letter_space{
+  padding: 5px 23px;
+
+}
+
+
+
+
+/*==================================================
+スライダーのためのcss
+===================================*/
+/*画像の横幅を100%にしてレスポンシブ化*/
+img{
+	width: 100%;
+	height: auto;
+	vertical-align: bottom;/*画像の下にできる余白を削除*/
+}
+
+/*メイン画像下に余白をつける*/
+
+.gallery{
+	margin:0 0 5px 0;
+}
+
+.gallery li{
+list-style:none;
+}
+
+/*矢印の設定*/
+.slick-arrow:before{
+	content:""!important;
+}
+
+/*戻る、次へ矢印の位置*/
+.slick-prev, 
+.slick-next {
+    position: absolute;/*絶対配置にする*/
+	z-index: 3;
+    top: 42%;
+    cursor: pointer;/*マウスカーソルを指マークに*/
+    outline: none;/*クリックをしたら出てくる枠線を消す*/
+    border-top: 2px solid #ccc;/*矢印の色*/
+    border-right: 2px solid #ccc;/*矢印の色*/
+    height: 25px;
+    width: 25px;
+}
+
+.slick-prev {/*戻る矢印の位置と形状*/
+    left:2.5%;
+    transform: rotate(-135deg);
+}
+
+.slick-next {/*次へ矢印の位置と形状*/
+    right:2.5%;
+    transform: rotate(45deg);
+}
+
+/*選択するサムネイル画像の設定*/
+
+.choice-btn li{
+	cursor: pointer;
+	outline: none;
+	background:#333;
+	width:25%!important;
+list-style:none;
+}
+
+.choice-btn li img{
+	opacity: 0.4;/*選択されていないものは透過40%*/
+}
+
+.choice-btn li.slick-current img{
+	opacity: 1;/*選択されているものは透過しない*/
+}
+
+.choice-btn .slick-track {
+	transform: unset !important;/*画面幅サイズ変更に伴うサムネイル固定*/
+}
+
+/*線が伸びる*/
+.border{
+  position: relative;
+  text-align: center;
+  color: #fff;
+}
+
+.border:before{
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom:0;
+  width: 0;
+  border-bottom: solid 2px #FFF;
+  transform: translateX(-50%);
+  animation: border_anim 1s linear forwards;
+  animation-delay: 2s;
+}
+
+@keyframes border_anim {
+  0%{
+    width: 0%;
+  }
+  100%{
+    width: 35%;
+  }
+}
+
+
+/*TEST*/
+.about_text{
+  position: absolute;
+  top: 0;
+ right: 13px;
+ font-size: 22px;
+ color: #FFF;
+ display: block;
+ width: 100%;
+height: 100%;
+ z-index: 2;
+}
+.about_text span{
+  position: absolute;
+  top:75%;
+  right: 10%;
+  letter-spacing: 2px;
+  font-size: 1.6em;
+
+}
+
+.about_text:hover{
+ opacity: 0;
+ height: 100%;
+
+}
+
+
+.all img{
+  height:	100%;
+}
+
+
+.all {
+	width:50vw;
+	height:	auto;
+	overflow:	hidden;
+	margin:	0;
+	position:	relative;	/* 相対位置指定 */
+}
+.all .caption {
+	font-size:	130%;
+	text-align:		center;
+	padding-top: 22%;
+	color:			#fff;
+
+
+}
+.all .mask {
+	width:			100%;
+	height:			100%;
+	position:		absolute;	/* 絶対位置指定 */
+	top:			0;
+	left:			0;
+	opacity:		0;	/* マスクを表示しない */
+	background-color:	rgba(0,0,0,0.6);	/* マスクは半透明 */
+	-webkit-transition:	all 0.4s ease;
+	transition:		all 0.4s ease;
+  
+}
+.all:hover .mask {
+	opacity:1;
+	transition:2s;
+
+  
+}
+
+ 
+.all_dic{
+  padding: 20px 0px 0px 0px;
+}
+
+  /*OFFICEページ */
+#office{
+  text-align: center;
+}
+.office_title{
+  padding: 80px 0px;
+  color: #000;
+  font-size: 3em;
+}
+.office_01{
+  flex: 1;
+  background-image: url(/images/top04.jpg);
+  padding: 200px 0px;
+  background-size: cover;
+}
+
+
+.office_02{
+  flex: 1;
+  background-image: url(/images/top05.jpg);
+  padding: 200px 0px;
+  background-size: cover;
+}
+
+
+#office h2{
+  font-size:3em;
+  line-height:40px; 
+ color: #FFF;
+}
+#office 
+.sub_title{
+color: #FFF;
+padding: 0px;
+margin: 0px;
+}
+.office_text{
+  flex: 1;
+  padding-top: 100px;
+  line-height: 3em;
+  font-size: 16px;
+}
+.inner{
+   width: 80%;
+   margin: auto;
+ 
+}
+
+/* reset */
+div, figure, figucaption, img {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* web font */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+
+/* hover effect */
+.list {
+  position: relative;
+  width: 230px;
+  height: 230px;
+  overflow: hidden;
+}
+.list-thumb {
+  width: 230px;
+  height: 230px;
+}
+.list-thumb img {
+  position: static;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition-duration: 0.5s;
+}
+.list:hover .list-thumb img {
+  filter: brightness(40%);
+}
+.list:hover .list-desc {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 45%;
+  left: 0%;
+  transform: translateY(-50%);
+  color: #fff;
+  font-size: 18px;
+}
+.list-desc {
+  position: relative;
+}
+.list-desc > p {
+  width: 100%;
+  position: absolute;
+  top: 45%;
+  left: 0%;
+  transform: translateY(-50%);
+  text-align: center;
+  font-family: 'Josefin Sans';
+  font-weight: 700;
+  font-size: 24px;
+  letter-spacing: 2px;
+}
+
+
+.sample2 {
+	width:			280px;
+	height:			188px;
+	overflow:		hidden;
+	margin:			10px 8px 10px 16px;
+	position:		relative;
+}
+.sample2 .caption {
+	font-size:		130%;
+	text-align: 		center;
+	color:			#fff;
+}
+.sample2 .mask {
+	width:			100%;
+	height:			100%;
+	position:		absolute;
+	top:			0;
+	left:			0;
+	opacity:		0;	/* マスクを表示しない */
+	background-color:	rgba(0,0,0,0.4);
+	-webkit-transition:	all 0.6s ease;
+	transition:		all 0.6s ease;
+}
+.sample2:hover .mask {
+	opacity:		1;	/* マスクを表示する */
+	padding-top:		80px;	/* ホバーで下にずらす */
+}

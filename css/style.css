@@ -1,0 +1,1813 @@
+@charset "UTF-8";
+:root {
+   --base_line_height: 1.8;
+  --background-color:#FFFFFF;
+  --bg_color02:#f4f5f6;
+  --bg_color03:#ebedf0;
+  --bg_colorbk:#333;
+  --cont_width:980px;
+  --base_color:#7c7c7c;
+ 
+   }
+
+   /*ボックスサイズ算出をborer-boxに */
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+
+body {
+  height: 100%;
+  width: 100%;
+  font-family: "Hiragino Kaku Gothic W1 JIS2004", "ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro ","メイリオ";
+  font-feature-settings: "palt";
+  line-height: 2;
+  color: var(--base_color); 
+  font-size: 16px; 
+  font-weight:200;
+  margin: 0px  60px 0px 0px;
+  padding: 0px;
+ 
+}
+
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 62.5%;/*rem算出をしやすくするために*/
+}
+.inner{
+  max-width:980px;
+  min-width: 450px;
+  text-align: center;
+  margin: 0px auto;
+  padding: 50px;
+}
+
+.point_on{
+  pointer-events: fill;
+}
+
+
+/*ファーストビュー*/
+/*========= ローディング画面のためのCSS ===============*/
+#splash {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #333;
+  z-index: 9999999;
+  text-align:center;
+  color:#fff;
+  
+}
+
+#splash-logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3em;
+  animation-name: sp-logo;
+  animation-fill-mode:forwards;
+   animation-duration:3s;
+}
+
+
+
+/*========= 画面遷移のためのCSS ===============*/
+
+/*画面遷移アニメーション*/
+.splashbg{
+    display: none;
+}
+
+/*bodyにappearクラスがついたら出現*/
+body.appear .splashbg{
+    display: block;
+    content: "";
+    position:fixed;
+     z-index: 999;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    transform: scaleX(0);
+    background-color: #333;/*伸びる背景色の設定*/
+  animation-name:PageAnime;
+  animation-duration:1.2s;
+  animation-timing-function:ease-in-out;
+  animation-fill-mode:forwards;
+}
+
+@keyframes PageAnime{
+  0% {
+    transform-origin:left;
+    transform:scaleX(0);
+  }
+  50% {
+    transform-origin:left;
+    transform:scaleX(1);
+  }
+  50.001% {
+    transform-origin:right;
+  }
+  100% {
+    transform-origin:right;
+    transform:scaleX(0);
+  }
+}
+
+/*画面遷移の後現れるコンテンツ設定*/
+#container{
+  opacity: 0;/*はじめは透過0に*/
+}
+
+/*bodyにappearクラスがついたら出現*/
+body.appear #container{
+  animation-name:PageAnimeAppear;
+  animation-duration:1s;
+  animation-delay: 0.8s;
+  animation-fill-mode:forwards;
+  opacity: 0;
+}
+
+@keyframes PageAnimeAppear{
+  0% {
+  opacity: 0;
+  }
+  100% {
+  opacity: 1;
+}
+}
+
+
+
+
+/* 共通 */
+.flex{
+  display: flex;
+  justify-content: center;
+}
+.flex_item{
+  flex: 1; /* これが重要！ */ 
+}
+
+
+.space{
+  padding: 10px;
+  margin: 0px;
+}
+
+.bg_color02{
+  background-color: var(--bg_color02);
+}
+a{
+  color: var(--base_color); 
+  text-decoration: none;
+ 
+}
+a:hover{
+  color: #ffffff;
+}
+
+
+.sub_title{
+  font-size:1em;
+  letter-spacing: 3px;
+}
+.table_cell{
+  display: table-cell;
+  justify-content: center;
+}
+
+
+header a{
+  color: #ffffff;
+  text-decoration: none;
+  padding-left:20px;
+  transition: 1s;
+}
+header a:hover{
+  color: rgb(122, 122, 119);
+}
+
+header.invert{
+  color:#000;
+  border:solid 1px #000;
+  transition: 2s;
+}
+
+header.invert02{
+  color: #FFF;
+  border:solid 1px #FFF;
+}
+
+header.invert a{
+  color: #000;
+  }
+header.invert a:hover{
+  color:#000;
+}
+
+header.invert02 a{
+  color: #FFF;
+  }
+header.invert02 a:hover{
+  color: #FFF;
+}
+
+#add{
+  flex: 1;
+   text-align: right;
+  margin-right: 20px;
+  line-height:28px ;
+   font-size: 16px;
+  font-family:Hiragino Kaku Gothic W1 JIS2004 ;
+  font-style: italic;
+  font-weight: 100;
+  letter-spacing: 3px;
+  color: #FFF;
+ }
+
+#add.black{
+  color: #333;
+  transition: 2s;
+}
+
+#add.white{
+  color: #FFF;
+  transition: 2s;
+}
+
+
+/* ここから作り直し*/
+header{
+  background-color:none;
+  position: fixed;
+  border:solid 1px #FFF;
+  top: 30px;
+  left: 30px;
+  right: 30px;
+  height: 93vh;
+  z-index: 999;
+  pointer-events: none;
+  
+}
+#header_cont{
+  height: 60px;
+  }
+
+
+
+
+.logo{
+  width: 100px;
+  pointer-events:all;  
+}
+.menu{
+  flex: 1;
+ margin-top: 20px; 
+ pointer-events:all;  
+}
+
+
+
+
+.s_box{
+  width: 60px;
+  border:solid 1px #FFF;
+  border-top-style:none;
+  border-right-style:none;
+  transition: 2s;
+  pointer-events: all;
+}
+
+
+.s_box.border_black{
+  border:solid 1px #333;
+  border-top-style:none;
+  border-right-style:none;content
+  transition: 2s;
+}
+
+.s_box.border_white{
+  border:solid 1px #FFF;
+  border-top-style:none;
+  border-right-style:none;
+  transition: 2s;
+}
+
+
+
+
+/*メールアイコン*/
+.dli-mail {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1;
+  position: relative;
+  top:15px;
+  left:12px;
+  width: 28px;
+  height: 18px;
+  border: 0.1em solid currentColor;
+  border-radius: 0.1em;
+  box-sizing: content-box;
+  overflow: hidden;
+  color: #fff;
+  transition: 2s;
+}
+
+.dli-mail.black{
+  color:#333;
+  transition: 2s;
+}
+
+.dli-mail.white{
+  color: #FFF;
+  transition: 2s;
+}
+
+
+
+
+.dli-mail::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 0.75425em;
+  height: 0.75425em;
+  border: 0.1em solid currentColor;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-radius: 0 0 0 0.1em;
+  box-sizing: content-box;
+  transform: translate(-50%, -50%) rotate(-45deg) skew(10deg, 10deg);
+}
+
+/* スライダー */
+#top{
+  position: relative;
+  height: 100vh;
+  margin: 0;
+  
+ }
+
+#s_top{
+  display: none;
+}
+
+
+ 
+  #slide{
+    position:absolute;
+    justify-content: center;
+    text-align: center;
+    background-color: #000000;
+     }
+
+  #slide ul{
+	position:relative;
+}
+
+#slide li{
+	position:absolute;
+	width:100%;
+} 
+.slide_img{
+  width: 100vw;
+  height: 100vh;
+}
+
+
+.slide_img01{
+    animation-name:zoom-in;
+    animation-duration:4s;
+    animation-fill-mode:forwards;
+    width: 100vw;
+    animation-delay: 1s;
+    animation-iteration-count:1;
+    height: 100vh;
+
+}  
+@keyframes zoom-in{
+  0% { filter: grayscale(100%);}
+  60% { filter: grayscale(70%);}
+  80% { filter: grayscale(80%);}
+   100% {filter: grayscale(0%); }
+    
+    }
+
+
+ 
+.logo_l{
+ 	position: absolute;
+	z-index: 1;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	font-size:6vw;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+  color: #FFF;
+}
+
+
+
+
+
+
+/* お問いあわせバナー */
+
+.contact_banner{
+  background-color: var(--bg_color03);
+   padding: 25px;
+   margin: 100px 150px 0px;
+}
+
+.contact_banner div{
+  font-size: 1.6em;
+  line-height: 1.5em;
+  font-style: italic;
+  color: #706b6b;
+    }
+
+.contact_banner_title{
+  position: relative;
+  top: -35px;
+
+}
+
+
+.margin_tb100px{
+  margin: 100px auto;
+}
+
+.padding_top_bt50{
+ padding: 50px 0px;
+}
+
+.padding_top50{
+  padding-top: 50px;
+ }
+
+ .padding_bt50{
+  padding-bottom: 50px;
+ }
+
+ .padding_bt25{
+  padding-bottom: 25px;
+ }
+ .margin_lr{
+  margin: 0px 25px;
+ }
+ .margin_50{
+  margin: 50px 0px;
+ }
+
+
+.font_l{
+  font-size: 22px;
+  font-family:Hiragino Kaku Gothic W1 JIS2004 ;
+  line-height: 2em;
+
+}
+
+.font_ll{
+  font-size: 25px;
+  font-family:Hiragino Kaku Gothic W1 JIS2004 ;
+  line-height: 2em;
+
+}
+
+h2 {
+  font-size: 38px;
+  line-height: 45px; 
+  padding-bottom: 10px;
+  letter-spacing: 3px;
+}
+
+.bold{font-weight: bold;}
+
+/* コンセプト */
+#concept{
+  background-color: #FFF;
+}
+.position{
+  position: relative;
+  z-index: 1;
+}
+
+
+
+/* WORKS */
+#works{
+  background-color: #39393a;
+}
+
+.works_content{
+  color:#fff;
+  background-color: rgba( 0, 0, 0, 0.55 );
+  width: 35vw;
+  opacity: 0.1; 
+  padding-top: 100px;
+  padding-left: 120px;
+  padding-right: 50px;
+  padding-bottom: 120px;
+  display: block;
+}
+
+.works_content p{
+  font-size: 0.8em;
+}
+
+
+.work_space{
+  background-size: cover;
+  height: 90vh;
+  display:flex;
+  filter: grayscale(1);/*モノクロ具合を変更したい場合はこの数値を変更*/
+  transition: .5s ease-in-out;/*移り変わる速さを変更したい場合はこの数値を変更*/
+   }
+
+.gray_none{
+  filter: grayscale(0);/*モノクロ具合を変更したい場合はこの数値を変更*/
+  transition-delay:2s;
+}
+
+
+   
+.work01{
+background-image:url(/images/top01.jpg)
+
+}
+
+.work02{
+  background-image: url(/images/about09.jpg);
+  }
+
+
+.gray {
+	animation-name: gray;
+	animation-duration: 3s;
+  animation-delay: 4s;
+  filter: grayscale(100%);
+  animation-fill-mode:forwards;
+}
+@keyframes gray {
+	0% {
+		filter: grayscale(80%);
+	}
+	100% {
+		filter: grayscale(0%);
+	}
+}
+
+/*--@keyframes--*/
+@keyframes アニメーション名 {
+	0% {
+		値;
+	}
+	100% {
+		値;
+	}
+}
+要素 {
+	animation-name: アニメーション名;
+	animation-duration: 時間(値);
+	animation-delay: 時間(値);
+}
+
+
+
+/*grid */
+#works_grid{
+  background-color: #330505;
+  width: 100vw;
+}
+
+.wrap-img-hover{
+  width:100%;
+  height: 100%;
+  display: block;
+}
+.wrap-img-hover a{
+  display: block;
+overflow: hidden;
+  position: relative;
+}
+.wrap-img-hover a img{
+  display: block;
+}
+.wrap-img-hover a .figcaption{
+  display: block;
+transition: all .3s;
+   opacity: 0;
+background: rgba(0,0,0,0.7);
+   position: absolute;
+top: 0;
+left: 0;
+   width: 100%;
+   height: 100%;
+  color: #fff;
+}
+.wrap-img-hover a:hover .figcaption{
+   opacity: 1;
+}
+.wrap-img-hover a .figcaption p{
+display: block;
+position: absolute;
+top:55%;
+left: 50%;
+ transform: translate(-50%,-50%);
+   text-align: center;
+width: 90%;
+}
+
+.wrap-img-hover a .figcaption h2{
+ position: absolute;
+ display: block;
+ top:40%;
+ left: 50%;
+ transform: translate(-50%,-50%);
+ text-align: center;
+color: red;
+}
+
+/*ホーバーエフェクト*/
+@import url(https://fonts.googleapis.com/css?family=Raleway:300,700);
+@import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
+figure.snip {
+  font-family: 'Raleway', Arial, sans-serif;
+  position: relative;
+  overflow: hidden;
+  margin: 0px;
+  min-width: 230px;
+  width: 100%;
+  color: #ffffff;
+  text-align: left;
+  font-size: 16px;
+  background-color: #000000;
+}
+figure.snip * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+}
+figure.snip img {
+  max-width: 100%;
+  backface-visibility: hidden;
+  vertical-align: top;
+  object-fit: cover;
+
+}
+figure.snip:after,
+figure.snip figcaption {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+figure.snip:after {
+  content: '';
+  background-color: rgba(0, 0, 0, 0.65);
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+  opacity: 0;
+}
+figure.snip figcaption {
+  z-index: 1;
+  padding: 40px;
+}
+figure.snip h3,
+figure.snip .links {
+  width: 100%;
+  margin: 5px 0;
+  padding: 0;
+}
+figure.snip h3 {
+  line-height: 1.1em;
+  font-weight: 700;
+  font-size: 1.4em;
+  text-transform: uppercase;
+  opacity: 0;
+}
+figure.snip p {
+  font-size: 0.8em;
+  font-weight: 300;
+  letter-spacing: 1px;
+  opacity: 0;
+  top: 50%;
+  -webkit-transform: translateY(40px);
+  transform: translateY(40px);
+}
+figure.snip i {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  padding: 20px 25px;
+  font-size: 34px;
+  opacity: 0;
+  -webkit-transform: translateX(-10px);
+  transform: translateX(-10px);
+}
+figure.snip a {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+figure.snip:hover img,
+figure.snip.hover img {
+  zoom: 1;
+  filter: alpha(opacity=50);
+  -webkit-opacity: 0.5;
+  opacity: 0.5;
+}
+figure.snip:hover:after,
+figure.snip.hover:after {
+  opacity: 1;
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+}
+figure.snip:hover h3,
+figure.snip.hover h3,
+figure.snip:hover p,
+figure.snip.hover p,
+figure.snip:hover i,
+figure.snip.hover i {
+  -webkit-transform: translate(0px, 0px);
+  transform: translate(0px, 0px);
+  opacity: 1;
+}
+
+
+
+.grid_btn{
+ position: absolute;
+ top:80%;
+ left: 50%;
+ transform: translate(-50%,-50%);
+   text-align: center;
+width: 50%;
+border: #fff solid 1px;
+
+}
+.parent {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+grid-template-rows: repeat(2, 1fr);
+grid-column-gap: 0px;
+grid-row-gap: 0px;
+}
+
+.div1 { grid-area: 1 / 1 / 2 / 2; }
+.div2 { grid-area: 1 / 2 / 2 / 3; }
+.div3 { grid-area: 1 / 3 / 2 / 4; }
+.div4 { grid-area: 2 / 1 / 3 / 2; }
+.div5 { grid-area: 2 / 2 / 3 / 3; }
+.div6 { grid-area: 2 / 3 / 3 / 4; }
+
+
+/*========= 流れるテキスト ===============*/
+
+
+.slide-in {
+	overflow: hidden;
+    display: inline-block;
+}
+
+.slide-in_inner {
+	display: inline-block;
+
+}
+ /*========= ワークスモア ===============*/
+.more_area{
+  background-color:#d5d8e1 ;
+  padding: 25px 0px;
+}
+.more_link{
+  
+}
+
+.more_link a{
+    font-style: italic;
+    background-color: #FFF;
+    padding: 25px 0px;
+    margin: 25px 10vw;
+    text-align: center;
+    display: block;
+    clip-path: polygon(3% 0, 100% 0%, 97% 100%, 0 100%);
+}
+.more_link a:hover{
+  background-color: #555;
+  transition:2s;
+}
+
+
+
+/*========= SARVICE===============*/
+#service{
+  background-image: url(/images/about10.jpg);
+  padding: 200px 0px;
+  background-color: #555;
+
+}
+
+#service .content{
+  opacity: 0.9;
+  background-color: #FFF;
+}
+
+#service p{
+  padding-bottom: 20px;
+}
+
+/*========= FLOW===============*/
+#flow{
+  background-color: var(--bg_colorbk); 
+  padding: 50px 0px 200px;
+  color: #FFF;
+  text-align: center;
+
+}
+
+
+
+
+#flow h3{
+  font-size: 30px;
+  line-height: 100px;
+}
+.flow_list{
+  display: flex;
+  text-align: left;
+  width: 50vw;
+  background-color: #333;
+  margin: 20px auto ;
+
+
+}
+.flow_num{
+  font-size: 50px;
+  padding-right: 60px;
+  position: relative;
+  font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+font-style: italic;
+
+
+
+}
+.flow_num::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 0px;
+  height: 40px;
+  margin: auto;
+  background-color:red;
+}
+
+.flow_num::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 1px;
+  height:70%;
+  margin: auto;
+  background-color: white;
+  left: -60px;
+  top: 120px;
+}
+
+
+/*フッター*/
+#footer{
+  background-color: var(--bg_colorbk); 
+  color: #FFF;
+  padding: 50px;
+
+}
+.footer_inner{
+   margin: 0px auto;
+   width: 20vw;
+
+}
+#footer a{
+  color: #FFF;
+}
+
+#footer a:hover{
+  color: #ccc;
+}
+
+.footer_text_subtitle{
+  padding-bottom: 10px;
+}
+
+
+.footer_text{
+  line-height: 1.7em;
+  font-size: 12px;
+}
+
+.copy{
+  font-size: 14px;
+  color: #ccc;
+text-align: center;
+}
+
+
+
+/*== ボタン共通設定 */
+.btn{
+  /*アニメーションの起点とするためrelativeを指定*/
+  position: relative;
+overflow: hidden;
+  /*ボタンの形状*/
+text-decoration: none;
+display: inline-block;
+  border: 1px solid #555;/* ボーダーの色と太さ */
+  padding: 10px 30px;
+  text-align: center;
+  outline: none;
+  /*アニメーションの指定*/   
+  transition: ease .2s;
+}
+
+/*ボタン内spanの形状*/
+.btn span {
+position: relative;
+z-index: 1;/*z-indexの数値をあげて文字を背景よりも手前に表示*/
+color:#555;
+}
+.btn span:hover{
+  color: #FFF;
+}
+
+.btn span::after{
+  content: '▼'
+}
+
+.btn :hover span{
+color:#FFF;
+}
+
+/*== 背景が流れる（斜め） */
+.bgskew::before {
+content: '';
+  /*絶対配置で位置を指定*/
+position: absolute;
+top: 0;
+left: -130%;
+  /*色や形状*/
+background:#333;
+width:120%;
+height: 100%;
+transform: skewX(-25deg);
+}
+
+/*hoverした時のアニメーション*/
+.bgskew:hover::before {
+animation: skewanime .5s forwards;/*アニメーションの名前と速度を定義*/
+}
+
+@keyframes skewanime {
+100% {
+  left:-10%;/*画面の見えていない左から右へ移動する終了地点*/
+}
+}
+
+
+/*========= アニメーションの指定 ===============*/
+
+
+.js-fade{
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(50px);
+  transition: opacity 1s,visibility 1s, transform 1s;
+  animation-delay: 1s;
+
+}
+.js-left  {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 1s,visibility 1s, transform 1s;
+  animation-delay: 1s;
+  animation-duration: 2s;
+  }
+
+ 
+
+
+.js-up  {
+  opacity: 0;
+  transform: translateY(-110px);
+  transition: opacity 1s,visibility 1s, transform 1s;
+  animation-delay: 2s;
+  }
+
+
+.inview {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0px);
+}
+
+
+
+
+.textAnime {
+  clip-path: inset(0 100% 0 0);
+  animation: textAnime;
+  display: inline-block;
+  animation-fill-mode:forwards;
+  animation-duration:3s;
+  animation-delay: inherit;
+}
+ @keyframes textAnime {
+  100% {
+      clip-path: inset(0 0 0 0);
+  }
+}
+
+.textAnime_deray {
+  clip-path: inset(0 100% 0 0);
+  animation: textAnime;
+  display: inline-block;
+  animation-fill-mode:forwards;
+  animation-duration:3s;
+  animation-delay: 5s;
+}
+ @keyframes textAnime {
+  100% {
+      clip-path: inset(0 0 0 0);
+  }
+}
+
+
+
+
+/*==================================================
+フェードイン
+===================================*/
+
+/* その場で */
+.fadeIn{
+  animation-name:fadeInAnime;
+  animation-duration:3s;
+  animation-fill-mode:forwards;
+  opacity:0;
+  }
+  
+  @keyframes fadeInAnime{
+    from {
+      opacity: 0;
+    }
+  
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* 下から */
+  
+  .fadeUp{
+  animation-name:fadeUpAnime;
+  animation-duration:0.5s;
+  animation-fill-mode:forwards;
+  opacity:0;
+  }
+  
+  @keyframes fadeUpAnime{
+    from {
+      opacity: 0;
+    transform: translateY(100px);
+    }
+  
+    to {
+      opacity: 1;
+    transform: translateY(0);
+    }
+  }
+  
+  /* 上から */
+  
+  .fadeDown{
+  animation-name:fadeDownAnime;
+  animation-duration:0.5s;
+  animation-fill-mode:forwards;
+  opacity:0;
+  }
+  
+  @keyframes fadeDownAnime{
+    from {
+      opacity: 0;
+    transform: translateY(-100px);
+    }
+  
+    to {
+      opacity: 1;
+    transform: translateY(0);
+    }
+  }
+  
+  /* 左から */
+  .fadeLeft{
+    animation-name:fadeLeftAnime;
+    animation-duration:0.7s;
+    animation-fill-mode:forwards;
+    opacity:0;
+
+  }
+ 
+  
+  @keyframes fadeLeftAnime{
+    from {
+      opacity: 0;
+    transform: translateX(-100px);
+    }
+  
+    to {
+      opacity: 1;
+    transform: translateX(0);
+    }
+  }
+  
+  /* 右から */
+  
+  .fadeRight{
+  animation-name:fadeRightAnime;
+  animation-duration:0.5s;
+  animation-fill-mode:forwards;
+  opacity:0;
+  }
+  
+  @keyframes fadeRightAnime{
+    from {
+      opacity: 0;
+    transform: translateX(100px);
+    }
+  
+    to {
+      opacity: 1;
+    transform: translateX(0);
+    }
+  }
+
+
+
+  
+/*コンタクト*/
+#contact{
+  background-color: #FFF;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 100;
+  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOkCnqEu92Fr1MmgVxIIzc.ttf) format('truetype');
+}
+form.contact-form {
+  width: 100%;
+  max-width: 980px;
+  margin: 10px auto;
+  font-size: 15.5px;
+  font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 100;
+  line-height: 30px;
+  letter-spacing: -0.5px;
+  box-shadow: none;
+}
+form.contact-form:hover {
+
+}
+form.contact-form span {
+  text-align: center;
+  display: block;
+  color: #333;
+  padding: 19.375px 19.375px 7.75px;
+  font: inherit;
+  font-size: 25.079px;
+}
+form.contact-form ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+form.contact-form ul li {
+  padding: 0;
+  border-bottom: 1px solid #ddd;
+  margin: 0;
+  text-align: center;
+  width: 100%;
+}
+form.contact-form ul li i.form-icon {
+  display: inline-block;
+  vertical-align: middle;
+  width: 2%;
+  text-align: center;
+  margin: 0 0.5% 0 1%;
+  padding: 0;
+  font-size: 16.275px;
+  color: #aaa;
+}
+form.contact-form ul li input[type="text"] {
+  width: 90%;
+  background: none;
+  margin: 0;
+  padding: 10.33333385px 2%;
+  border: 0;
+  border-bottom: 3px solid rgba(0, 0, 0, 0);
+  text-align: left;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  transition: border-bottom 0.35s ease;
+}
+form.contact-form ul li input[type="text"]:focus {
+  outline: none;
+  border-bottom: 3px solid #f1a6f3;
+}
+form.contact-form ul li input[type="text"]::-webkit-input-placeholder {
+  -webkit-transition: color 0.35s ease;
+  transition: color 0.35s ease;
+  color: #ccc;
+}
+form.contact-form ul li input[type="text"]:-moz-placeholder {
+  -moz-transition: color 0.35s ease;
+  transition: color 0.35s ease;
+  color: #ccc;
+}
+form.contact-form ul li input[type="text"]::-moz-placeholder {
+  -moz-transition: color 0.35s ease;
+  transition: color 0.35s ease;
+  color: #ccc;
+}
+form.contact-form ul li input[type="text"]:-ms-input-placeholder {
+  -ms-transition: color 0.35s ease;
+  transition: color 0.35s ease;
+  color: #ccc;
+}
+form.contact-form ul li input[type="text"]:focus::-webkit-input-placeholder {
+  color: #f1a6f3;
+}
+form.contact-form ul li input[type="text"]:focus:-moz-placeholder {
+  color: #f1a6f3;
+}
+form.contact-form ul li input[type="text"]:focus::-moz-placeholder {
+  color: #f1a6f3;
+}
+form.contact-form ul li input[type="text"]:focus:-ms-input-placeholder {
+  color: #f1a6f3;
+}
+form.contact-form ul li textarea {
+  display: inline-block;
+  vertical-align: top;
+  width: 88%;
+  background: none;
+  padding: 10.33333385px 2%;
+  resize: none;
+  border: 0;
+  border-bottom: 3px solid rgba(0, 0, 0, 0);
+  text-align: left;
+  height: auto;
+  min-height: 133px;
+  margin: 0;
+  font-size: inherit;
+  font-weight: inherit;
+  font-family: inherit;
+  transition: border-bottom 0.35s ease;
+}
+form.contact-form ul li textarea:focus {
+  outline: none;
+  border-bottom: 3px solid #f1a6f3;
+}
+form.contact-form ul li textarea::-webkit-scrollbar {
+  width: 4px;
+}
+form.contact-form ul li textarea::-webkit-scrollbar-thumb {
+  background: #ffffff;
+  border-radius: 2px;
+}
+form.contact-form ul li textarea::-webkit-input-placeholder {
+  -webkit-transition: color 0.35s ease;
+  transition: color 0.35s ease;
+  color: #ccc;
+}
+form.contact-form ul li textarea:-moz-placeholder {
+  -moz-transition: color 0.35s ease;
+  transition: color 0.35s ease;
+  color: #ccc;
+}
+form.contact-form ul li textarea::-moz-placeholder {
+  -moz-transition: color 0.35s ease;
+  transition: color 0.35s ease;
+  color: #ccc;
+}
+form.contact-form ul li textarea:-ms-input-placeholder {
+  -ms-transition: color 0.35s ease;
+  transition: color 0.35s ease;
+  color: #ccc;
+}
+form.contact-form ul li textarea:focus::-webkit-input-placeholder {
+  color: #f1a6f3;
+}
+form.contact-form ul li textarea:focus:-moz-placeholder {
+  color: #f1a6f3;
+}
+form.contact-form ul li textarea:focus::-moz-placeholder {
+  color: #f1a6f3;
+}
+form.contact-form ul li textarea:focus:-ms-input-placeholder {
+  color: #f1a6f3;
+}
+form.contact-form ul li input[type="submit"] {
+  margin: 15px auto 15px;
+  padding: 10.33333385px 19.375px;
+  border: 1px solid #d0d0d0;
+  display: inline-block;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0);
+  font-weight: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  transition: background border 0.35s ease;
+}
+form.contact-form ul li input[type="submit"]:focus {
+  outline: none;
+  border: 1px solid #f1a6f3;
+}
+form.contact-form ul li input[type="submit"]:hover {
+  background: #eaeaea;
+  border: 1px solid #f1a6f3;
+}
+form.contact-form ul li input[type="submit"]:active {
+  background: #d0d0d0;
+}
+
+/*=========ハンバーガー ナビゲーションのためのCSS ===============*/
+
+#g-nav{
+  /*position:fixed;にし、z-indexの数値を大きくして前面へ*/
+  position:fixed;
+  z-index: 999;
+  /*ナビのスタート位置と形状*/
+top:0;
+  right: -120%;
+width:100%;
+  height: 100vh;/*ナビの高さ*/
+background:#999;
+  /*動き*/
+transition: all 0.6s;
+}
+
+/*アクティブクラスがついたら位置を0に*/
+#g-nav.panelactive{
+  right: 0;
+}
+
+/*ナビゲーションの縦スクロール*/
+#g-nav.panelactive #g-nav-list{
+  /*ナビの数が増えた場合縦スクロール*/
+  position: fixed;
+  z-index: 999; 
+  width: 100%;
+  height: 100vh;/*表示する高さ*/
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/*ナビゲーション*/
+#g-nav ul {
+  /*ナビゲーション天地中央揃え*/
+  position: absolute;
+  z-index: 999;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+}
+
+/*リストのレイアウト設定*/
+
+#g-nav li{
+list-style: none;
+  text-align: center;
+}
+
+#g-nav li a{
+color: #333;
+text-decoration: none;
+padding:10px;
+display: block;
+text-transform: uppercase;
+letter-spacing: 0.1em;
+font-weight: bold;
+}
+
+/*========= ボタンのためのCSS ===============*/
+.openbtn1{
+position:fixed;
+  z-index: 9999;/*ボタンを最前面に*/
+top:10px;
+cursor: pointer;
+  width: 50px;
+  height:50px;
+}
+
+/*×に変化*/  
+.openbtn1 span{
+  display: inline-block;
+  transition: all .2s;
+  position: absolute;
+  left: 15px;
+  height: 3px;
+  border-radius: 2px;
+background-color: #666;
+  width: 50%;
+}
+
+
+.openbtn1 span:nth-of-type(1) {
+top:15px; 
+}
+
+.openbtn1 span:nth-of-type(2) {
+top:23px;
+}
+
+.openbtn1 span:nth-of-type(3) {
+top:31px;
+}
+
+.openbtn1.active span:nth-of-type(1) {
+  top: 18px;
+  left: 20px;
+  transform: translateY(6px) rotate(-45deg);
+  width: 30%;
+}
+
+.openbtn1.active span:nth-of-type(2) {
+opacity: 0;
+}
+
+.openbtn1.active span:nth-of-type(3){
+  top: 30px;
+  left: 18px;
+  transform: translateY(-6px) rotate(45deg);
+  width: 30%;
+}
+
+
+/*========= ナビゲーションのためのCSS ===============*/
+
+#g-nav{
+  /*position:fixed;にし、z-indexの数値を大きくして前面へ*/
+  position:fixed;
+  z-index: 999;
+  /*ナビのスタート位置と形状*/
+top:0;
+  right: -120%;
+width:100%;
+  height: 100vh;/*ナビの高さ*/
+background:#999;
+  /*動き*/
+transition: all 0.6s;
+}
+
+/*アクティブクラスがついたら位置を0に*/
+#g-nav.panelactive{
+  right: 0;
+}
+
+/*ナビゲーションの縦スクロール*/
+#g-nav.panelactive #g-nav-list{
+  /*ナビの数が増えた場合縦スクロール*/
+  position: fixed;
+  z-index: 999; 
+  width: 100%;
+  height: 100vh;/*表示する高さ*/
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/*ナビゲーション*/
+#g-nav ul {
+  /*ナビゲーション天地中央揃え*/
+  position: absolute;
+  z-index: 999;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+}
+
+/*リストのレイアウト設定*/
+
+#g-nav li{
+list-style: none;
+  text-align: center;
+}
+
+#g-nav li a{
+color: #333;
+text-decoration: none;
+padding:10px;
+display: block;
+text-transform: uppercase;
+letter-spacing: 0.1em;
+font-weight: bold;
+}
+
+/*========= ボタンのためのCSS ===============*/
+.openbtn1{
+  position: absolute;
+cursor: pointer;
+  width: 50px;
+  height:50px;
+}
+
+/*×に変化*/  
+.openbtn1 span{
+  display: inline-block;
+  transition: all .4s;
+  position: absolute;
+  left: 14px;
+  height: 1px;
+  border-radius: 2px;
+background-color: #FFF;
+  width: 45%;
+}
+
+.openbtn1 span.bgblack{
+  background-color: #000;
+  transition: 2s;
+}
+
+.openbtn1 span.bgwhite{
+  background-color:#FFF;
+  transition: 2s;
+}
+
+.openbtn1 span:nth-of-type(1) {
+top:15px; 
+}
+
+.openbtn1 span:nth-of-type(2) {
+top:23px;
+}
+
+.openbtn1 span:nth-of-type(3) {
+top:31px;
+}
+
+.openbtn1.active span:nth-of-type(1) {
+  top: 18px;
+  left: 18px;
+  transform: translateY(6px) rotate(-45deg);
+  width: 30%;
+}
+
+.openbtn1.active span:nth-of-type(2) {
+opacity: 0;
+}
+
+.openbtn1.active span:nth-of-type(3){
+  top: 30px;
+  left: 18px;
+  transform: translateY(-6px) rotate(45deg);
+  width: 30%;
+}
+
+/*スマホ用*/  
+
+
+@media (max-width:750px) {
+  .sp_none{
+    display: none;
+  }
+
+  header{
+    top: 30px;
+    left:15px;
+    right: 15px;
+    height: 98vh;
+    z-index: 999;
+    pointer-events:none;
+  }
+  .content{
+    width: 100vw; 
+    padding: 50px 0px;
+    background-color: yellow;
+    }
+
+    .contact_banner{
+      background-color: var(--bg_color03);
+       padding: 25px;
+       margin: 50px 0px;
+    }
+
+    .works_content{
+     
+      width: 100vw;
+      opacity: 0.1; 
+      padding: 50px;
+      background-color: pink;
+    
+        }
+
+   /*========= FLOW===============*/
+#flow{
+  background-color: var(--bg_colorbk); 
+  padding: nonr;
+  color: #FFF;
+  text-align: center;
+  width: 100%;
+
+}
+
+
+
+
+#flow h3{
+  font-size: 20px;
+  line-height: 100px;
+}
+.flow_list{
+  display: flex;
+  text-align: left;
+  background-color: #333;
+  margin: 20px auto ;
+
+
+}
+.flow_num{
+  font-size:50px;
+  padding-right: 30px;
+  position: relative;
+  font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+font-style: italic;
+
+
+
+}
+.flow_num::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 0px;
+  height: 40px;
+  margin: auto;
+  background-color:red;
+
+}
+
+.flow_num::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 1px;
+  height:70%;
+  margin: auto;
+  background-color: white;
+  left: -60px;
+  top: 120px;
+}
+
+.inner{
+  max-width:430px;
+  min-width: 280px;
+  text-align: center;
+  margin: 0px 0px;
+  padding: 50px 0px;
+background-color:red;
+}
+
+flow
+/* WORKS */
+#works{
+  background-color: #39393a;
+
+}
+
+.works_content{
+  color:#fff;
+  background-color: rgba( 0, 0, 0, 0.55 );
+  width: 100vw;
+  opacity: 0.1; 
+  padding-top: 100px;
+
+  display: block;
+}
+
+.works_content p{
+  font-size: 0.8em;
+}
+
+
+.work_space{
+  background-size: cover;
+  height: 80vh;
+  display:flex;
+  filter: grayscale(1);/*モノクロ具合を変更したい場合はこの数値を変更*/
+  transition: .5s ease-in-out;/*移り変わる速さを変更したい場合はこの数値を変更*/
+   }
+
+   .contact_banner{
+    background-color: var(--bg_color03);
+     padding: 25px;
+     margin:50px auto;
+  }
+
+   *========= FLOW===============*/
+
+.works_content{
+  color:#fff;
+  background-color: rgba( 0, 0, 0, 0.55 );
+   opacity: 0.1; 
+  padding-top: 100px;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-bottom: 120px;
+
+}
+
+.works_content p{
+  font-size: 0.6em;
+}
+
+
+.work_space{
+  background-size: cover;
+  height: 80vh;
+  display:flex;
+  filter: grayscale(1);/*モノクロ具合を変更したい場合はこの数値を変更*/
+  transition: .5s ease-in-out;/*移り変わる速さを変更したい場合はこの数値を変更*/
+   }
+   /* スライダー */
+#top{
+  position: relative;
+  height:100vh;
+  margin: 0;
+  
+ }
+
+#s_top{
+  display: none;
+}
+
+
+ 
+  #slide{
+    position:absolute;
+    justify-content: center;
+    text-align: center;
+    background-color: #000000;
+     }
+
+  #slide ul{
+	position:relative;
+}
+
+#slide li{
+	position:absolute;
+	width:100%;
+} 
+.slide_img{
+  width: 100vw;
+  height: 100vh;
+}
+
+
+.slide_img01{
+    animation-name:zoom-in;
+    animation-duration:4s;
+    animation-fill-mode:forwards;
+    width: 100vw;
+    animation-delay: 1s;
+    animation-iteration-count:1;
+    height: 100vh;
+
+}  
+}
