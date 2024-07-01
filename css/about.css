@@ -362,14 +362,13 @@ text-align: center;
   padding:10px;
  color: #7a7777;
  text-transform: uppercase;
- f
 }
 
 .about_title{
-  font-size: 3em;
+  font-size: 2em;
 font-weight: bold;
-letter-spacing: 6px;
-padding-bottom: 50px;
+letter-spacing: 3px;
+padding-bottom: 25px;
 
 }
 
