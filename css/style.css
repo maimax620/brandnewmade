@@ -807,12 +807,13 @@ grid-row-gap: 0px;
 
 .more_link a{
     font-style: italic;
-    background-color: #FFF;
+    background-color: #797878;
     padding: 25px 0px;
     margin: 25px 10vw;
     text-align: center;
     display: block;
     clip-path: polygon(3% 0, 100% 0%, 97% 100%, 0 100%);
+    color: #FFF;
 }
 .more_link a:hover{
   background-color: #555;
@@ -1701,6 +1702,7 @@ div, figure, figucaption, img {
   background-color:#FFF;
   background-repeat: repeat;
   background-size: cover;
+  background-color: #333;
 
 }
 
@@ -1888,5 +1890,89 @@ background-image:none;
     .div4 { grid-area: 2 / 2 / 3 / 3; }
     .div5 { grid-area: 3 / 1 / 4 / 2; }
     .div6 { grid-area: 3 / 2 / 4 / 3; }
+
+    /*grid */
+
+
+.wrap-img-hover{
+  width:100%;
+  height: 100%;
+  display: block;
+}
+.wrap-img-hover a{
+  display: block;
+overflow: hidden;
+  position: relative;
+}
+.wrap-img-hover a img{
+  display: block;
+}
+.wrap-img-hover a .figcaption{
+  display: block;
+transition: all .3s;
+   opacity: 1;
+background: rgba(0, 0, 10, 0.7);
+   position: absolute;
+top: 0;
+left: 0;
+   width: 100%;
+   height: 100%;
+  color: #fff;
+}
+.wrap-img-hover a:hover .figcaption{
+   opacity: 1;
+}
+.wrap-img-hover a .figcaption p{
+display: block;
+position: absolute;
+top:55%;
+left: 50%;
+ transform: translate(-50%,-50%);
+   text-align: center;
+width: 90%;
+}
+
+.wrap-img-hover a .figcaption h2{
+  position: absolute;
+  display: block;
+  top:40%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+ }
+/*ホーバーエフェクト*/
+
+figure.snip {
+  background:rgba(0,0,0,0.7);
+}
+
+figure.snip:after,
+figure.snip figcaption {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+ }
+
+figure.snip figcaption {
+  z-index: 1;
+  padding: 40px;
+  background:rgba(0,0,0,0.7);
+
+}
+
+figure.snip h3 {
+  line-height: 1.7em;
+  font-weight: 500;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  opacity: 1;
+}
+
+
+
+
+
 
 }
