@@ -1826,7 +1826,7 @@ font-style: italic;
   color:#fff;
   background-color: none;
   width: 100vw;
-  opacity: 0.1; 
+  opacity: 0.95; 
   padding-top: 50px;
   padding-left: 30px;
   padding-right: 30px;
@@ -1854,113 +1854,16 @@ font-style: italic;
 }
 
 
-   
 .work01{
-background-image:none;
-}
-
-.work02{
-  background-image:none;
+  background-image:url(/images/top01.jpg)
+  
   }
-
-
-  .parent {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
+  
+  .work02{
+    background-image: url(/images/about09.jpg);
     }
-    
-    .div1 { grid-area: 1 / 1 / 2 / 2; }
-    .div2 { grid-area: 1 / 2 / 2 / 3; }
-    .div3 { grid-area: 2 / 1 / 3 / 2; }
-    .div4 { grid-area: 2 / 2 / 3 / 3; }
-    .div5 { grid-area: 3 / 1 / 4 / 2; }
-    .div6 { grid-area: 3 / 2 / 4 / 3; }
+  
 
-    /*grid */
-
-
-.wrap-img-hover{
-  width:100%;
-  height: 100%;
-  display: block;
-}
-.wrap-img-hover a{
-  display: block;
-overflow: hidden;
-  position: relative;
-}
-.wrap-img-hover a img{
-  display: block;
-}
-.wrap-img-hover a .figcaption{
-  display: block;
-transition: all .3s;
-   opacity: 1;
-background: rgba(0, 0, 10, 0.7);
-   position: absolute;
-top: 0;
-left: 0;
-   width: 100%;
-   height: 100%;
-  color: #fff;
-}
-.wrap-img-hover a:hover .figcaption{
-   opacity: 1;
-}
-.wrap-img-hover a .figcaption p{
-display: block;
-position: absolute;
-top:55%;
-left: 50%;
- transform: translate(-50%,-50%);
-   text-align: center;
-width: 90%;
-}
-
-.wrap-img-hover a .figcaption h2{
-  position: absolute;
-  display: block;
-  top:40%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  text-align: center;
- }
-/*ホーバーエフェクト*/
-
-figure.snip {
-  background:rgba(0,0,0,0.7);
-}
-
-figure.snip:after,
-figure.snip figcaption {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
- }
-
-figure.snip figcaption {
-  z-index: 1;
-  padding: 40px;
-  background:rgba(0,0,0,0.7);
-
-}
-
-figure.snip h3 {
-  line-height: 1.7em;
-  font-weight: 500;
-  font-size: 1.2em;
-  text-transform: uppercase;
-  opacity: 1;
-}
-
-
-
-
-
+  
 
 }
