@@ -1791,7 +1791,7 @@ font-style: italic;
   width: 0px;
   height: 40px;
   margin: auto;
-  background-color:red;
+  
 
 }
 
@@ -1801,11 +1801,11 @@ font-style: italic;
   left: 0;
   right: 0;
   bottom: 0;
-  width: 0px;
-  height:70%;
+  width: 1px;
+  height:65%;
   margin: auto;
   background-color: white;
-  left: -60px;
+  left: -30px;
   top: 120px;
 }
 
@@ -1813,26 +1813,22 @@ font-style: italic;
   min-width: 280px;
   text-align: center;
   margin: 0px 0px;
-  padding:30px;
+  padding:0px;
 }
-
 
 /* WORKS */
 #works{
-  background-color: none;
+  background-color: #39393a;
 }
 
 .works_content{
   color:#fff;
-  background-color: none;
-  width: 100vw;
-  opacity: 0.95; 
-  padding-top: 50px;
-  padding-left: 30px;
-  padding-right: 30px;
-  padding-bottom: 50px;
-  display: block;
+  background-color: rgba( 0, 0, 0, 0.55 );
+  width:100vw;
+  opacity: 0.1; 
+  padding: 50px;
 
+  display: block;
 }
 
 .works_content p{
@@ -1842,7 +1838,7 @@ font-style: italic;
 
 .work_space{
   background-size: cover;
-  height:40vh;
+  height: 40vh;
   display:flex;
   filter: grayscale(1);/*モノクロ具合を変更したい場合はこの数値を変更*/
   transition: .5s ease-in-out;/*移り変わる速さを変更したい場合はこの数値を変更*/
@@ -1854,16 +1850,14 @@ font-style: italic;
 }
 
 
+   
 .work01{
-  background-image:url(/images/top01.jpg)
-  
-  }
-  
-  .work02{
-    background-image: url(/images/about09.jpg);
-    }
-  
+background-image:url(/images/top01.jpg)
 
-  
+}
+
+.work02{
+  background-image: url(/images/about09.jpg);
+  }
 
 }
