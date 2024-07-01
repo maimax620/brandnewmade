@@ -1698,6 +1698,8 @@ div, figure, figucaption, img {
   height:100vh;
   margin: 0;
   background-color: #FFF;
+  background-image: url(/images/shop01.jpg);
+  background-repeat: repeat;
 
 }
 
