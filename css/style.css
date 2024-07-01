@@ -39,13 +39,16 @@ html {
   box-sizing: border-box;
   font-size: 62.5%;/*rem算出をしやすくするために*/
 }
-.inner{
+.inner,
+.inner02{
   max-width:980px;
   min-width: 450px;
   text-align: center;
   margin: 0px auto;
   padding: 50px;
 }
+
+
 
 .point_on{
   pointer-events: fill;
@@ -1668,13 +1671,6 @@ div, figure, figucaption, img {
     padding-bottom: 50px;
     letter-spacing: 3px;
   }
-#about h2 {
-    font-size: 1.8em;
-    line-height: 0.5em; 
-    padding-bottom: 20px;
-    letter-spacing: 3px;
-    color:#CCC;
-  }
 
 
 
@@ -1810,6 +1806,13 @@ font-style: italic;
 }
 
 .inner{
+  min-width: 280px;
+  text-align: center;
+  margin: 0px 0px;
+  padding:30px;
+}
+
+.inner02{
   min-width: 280px;
   text-align: center;
   margin: 0px 0px;
