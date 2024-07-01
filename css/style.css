@@ -355,10 +355,10 @@ header{
   position: relative;
   height: 100vh;
   margin: 0;
-  background-color:pink;
- }
+background-color: #333;
+  }
 
-#s_top{
+.s_top{
   display: none;
 }
 
@@ -1656,7 +1656,7 @@ div, figure, figucaption, img {
 /*1600スマホ用スマホ用スマホ用スマホ用スマホ用スマホ用スマホ用スマホ用スマホ用スマホ用スマホ用スマホ用スマホ用スマホ用スマホ用*/  
 
 
-@media (max-width:750px) {
+@media (max-width:768px) {
  
   .sp_none{
     display: none;
@@ -1679,8 +1679,17 @@ div, figure, figucaption, img {
   line-height: 1.5em;
   padding: 0px 0px;
   margin: auto;
-
+  animation-name:fadeUpAnime;
+  animation-name:fadeUpAnime;
+  animation-duration:0.5s;
+  animation-fill-mode:forwards;
+  opacity:0;
+  animation-delay: 1s;
+  
 }
+
+
+
 #top{
  display: none;
   }
@@ -1862,5 +1871,19 @@ background-image:none;
   }
 
 
+  .parent {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    }
+    
+    .div1 { grid-area: 1 / 1 / 2 / 2; }
+    .div2 { grid-area: 1 / 2 / 2 / 3; }
+    .div3 { grid-area: 1 / 3 / 2 / 4; }
+    .div4 { grid-area: 2 / 1 / 3 / 2; }
+    .div5 { grid-area: 2 / 2 / 3 / 3; }
+    .div6 { grid-area: 2 / 3 / 3 / 4; }
 
 }

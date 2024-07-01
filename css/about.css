@@ -12,16 +12,23 @@
 .about_header{
 position: relative;
 top: 150px;
-
 text-align: center;
 
 }
 
+.about_header span{
+  color: #9d9a9a;
+  display: block;
+  font-size: 1.2em;
+  padding: 10px 0px;
+
+}
 .about_header h2{
 font-size: 4em;
 font-weight: bold;
 letter-spacing: 6px;
-color: #FFF;
+color: #9d9a9a;
+text-transform: uppercase;
 }
 .about_title{
   font-size: 3em;
@@ -32,23 +39,6 @@ padding-bottom: 50px;
 }
 
 
-.catch {
-  display: flex;
-  align-items: center; /* 垂直中心 */
-  justify-content: center; /* 水平中心 */
-  color: #FFF;
-  }
-.catch:before, .catch:after {
-  border-top: 1px solid;
-  content: "";
-  width: 5em; /* 線の長さ */
-}
-.catch:before {
-  margin-right: 1em; /* 文字の右隣 */
-}
-.catch:after {
-  margin-left: 1em; /* 文字の左隣 */
-}
 .gaiyo{
   padding: 50px 0px;
   text-align: left;
@@ -360,7 +350,7 @@ text-align: center;
   font-size:2em;
   line-height:30px; 
   padding:10px;
- color: #7a7777;
+ color: #9d9a9a;
  text-transform: uppercase;
 }
 
@@ -369,8 +359,6 @@ text-align: center;
 font-weight: bold;
 letter-spacing: 3px;
 padding-bottom: 25px;
-color: #000;
-
 }
 
 
