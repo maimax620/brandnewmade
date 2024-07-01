@@ -9,7 +9,7 @@ $(function(){
 	var next = 2;
   
 	// フェードイン/アウトのインターバル（何秒ごとに画像を切り替えるか。）
-	var interval = 6000;
+	var interval = 4000;
   
 	// フェードイン/アウトのスピード
 	var duration = 1200;
@@ -32,7 +32,6 @@ $(function(){
 	  $("#slide li:nth-child(" + next + ")").fadeIn(duration);
   
 
-  
 //ヘッダーのカラーチェンジ用
 
 jQuery(function(){
