@@ -471,15 +471,17 @@ margin: 0px;
 /*選択するサムネイル画像の設定*/
 .choice-btn{
   width:100%;
+  padding: 0px;
+  margin: 0px;
  
 }
 
 .choice-btn li{
-	cursor: pointer;
+  cursor: pointer;
 	outline: none;
 	background:#333;
-	width:50%;
-  list-style:none;
+	width:50%!important;
+list-style:none;
 }
 
 .choice-btn li img{
