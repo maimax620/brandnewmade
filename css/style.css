@@ -1867,56 +1867,5 @@ background-image:none;
 }
 
 
-/*OFFICEページ */
-#office{
-  text-align: center;
-}
-
-#office .flex{
-  display:flex;
-  flex-flow: column;
-  justify-content:space-between;
-}
-
-
-.office_title{
-  padding: 40px 70px;
-  color: #000;
-  font-size: 1.4em;
-  text-align: center;
-} 
-.office_01{
-  background-image: url(/images/top04.jpg);
-  padding: 50px 0px;
-  background-size: cover;
-}
-
-
-.office_02{
-  background-image: url(/images/top05.jpg);
-  padding: 50px 0px;
-  background-size: cover;
-}
-
-
-#office h2{
-  font-size:3em;
-  line-height:25px; 
-  padding:10px;
-  
- color: #FFF;
-}
-#office 
-.sub_title{
-color: #FFF;
-padding: 0px;
-margin: 0px;
-}
-.office_text{
-    padding:50px;
-  line-height: 2em;
-  font-size: 15px;
- 
-}
 
 }

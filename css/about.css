@@ -332,3 +332,153 @@ height: 100%;
 	opacity:		1;	/* マスクを表示する */
 	padding-top:		80px;	/* ホバーで下にずらす */
 }
+
+
+
+/*1600スマホ用スマホ用スマホ用スマホ用スマホ用スマホ用スマホ用スマホ用スマホ用スマホ用スマホ用スマホ用スマホ用スマホ用スマホ用*/  
+
+
+@media (max-width:750px) {
+
+  /*物件詳細ページ */
+#about{
+  width: 100vw;
+ height: 250px;
+  background-color: var(--bg_colorbk); 
+
+ 
+}
+
+.about_header{
+position: relative;
+top: 120px;
+text-align: center;
+
+}
+
+#about .about_header h2{
+  font-size:2em;
+  line-height:30px; 
+  padding:10px;
+ color: #7a7777;
+ text-transform: uppercase;
+ f
+}
+
+.about_title{
+  font-size: 3em;
+font-weight: bold;
+letter-spacing: 6px;
+padding-bottom: 50px;
+
+}
+
+
+.catch {
+  display: flex;
+  align-items: center; /* 垂直中心 */
+  justify-content: center; /* 水平中心 */
+  color: #FFF;
+  }
+.catch:before, .catch:after {
+  border-top: 1px solid;
+  content: "";
+  width: 5em; /* 線の長さ */
+}
+.catch:before {
+  margin-right: 1em; /* 文字の右隣 */
+}
+.catch:after {
+  margin-left: 1em; /* 文字の左隣 */
+}
+.gaiyo{
+  padding: 50px 0px;
+  text-align: left;
+  font-size: 16px;
+}
+.gaiyo p{
+line-height: 2.5em;
+  border-bottom: solid 1px #CCCCCC;
+
+}
+
+.gaiyou_title{
+  background-color: #a9a8a8;
+  text-align: center;
+  color: #FFF;
+ margin-right: 50px;
+ letter-spacing: 2px;
+ font-size: 14px;
+ width: 150px;
+ padding: 5px 15px;
+ border-radius: 5px;
+ 
+}
+
+.letter_space{
+  padding: 5px 23px;
+
+}
+
+
+/*OFFICEページ */
+#office{
+  text-align: center;
+}
+
+#office .flex{
+  display:flex;
+  flex-flow: column;
+  justify-content:space-between;
+}
+
+
+.office_title{
+  padding: 40px 70px;
+  color: #000;
+  font-size: 1.4em;
+  text-align: center;
+} 
+.office_01{
+  background-image: url(/images/top04.jpg);
+  padding: 50px 0px;
+  background-size: cover;
+}
+
+
+.office_02{
+  background-image: url(/images/top05.jpg);
+  padding: 50px 0px;
+  background-size: cover;
+}
+
+
+
+#office 
+.sub_title{
+color: #FFF;
+padding: 0px;
+margin: 0px;
+}
+.office_text{
+  padding:50px;
+  line-height: 2em;
+  font-size: 15px;
+  display: block;
+ 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
