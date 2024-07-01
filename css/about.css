@@ -468,13 +468,27 @@ margin: 0px;
  
 }
 
+/*選択するサムネイル画像の設定*/
+.choice-btn{
+  width:100%;
+ 
+}
 
+.choice-btn li{
+	cursor: pointer;
+	outline: none;
+	background:#333;
+	width:50%;
+  list-style:none;
+}
 
+.choice-btn li img{
+	opacity: 0.4;/*選択されていないものは透過40%*/
+}
 
-
-
-
-
+.choice-btn li.slick-current img{
+	opacity: 1;/*選択されているものは透過しない*/
+}
 
 
 
