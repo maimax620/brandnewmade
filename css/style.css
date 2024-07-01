@@ -358,9 +358,6 @@ header{
 background-color: #333;
   }
 
-.s_top{
-  display: none;
-}
 
 
  
@@ -1693,11 +1690,12 @@ div, figure, figucaption, img {
 #top{
  display: none;
   }
+
 .s_top{
   position: relative;
   height:100vh;
   margin: 0;
-  background-color: #FFF;
+  background-color:yellow;
   background-image: url(/images/shop01.jpg);
   background-repeat: repeat;
 
