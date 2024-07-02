@@ -485,7 +485,6 @@ background-color: #333;
 
 .font_ll{
   font-size: 25px;
-  font-family:Hiragino Kaku Gothic W1 JIS2004 ;
   line-height: 2em;
 
 }
@@ -1792,7 +1791,7 @@ background-image:none;
     background-color:#000;
     padding: 10px 0px;;
     margin: 25px 10vw;
-    text-align: center;
+   text-align: center;
     display: block;
     clip-path: polygon(0% 0, 100% 0%, 100% 100%, 0 100%);
     color: #FFF;
@@ -1807,10 +1806,10 @@ background-image:none;
 
 .js-left  {
   opacity: 0;
-  transform: translateX(-200px);
+  transform: translateX(-50px);
   transition: opacity 1s,visibility 1s, transform 1s;
-  animation-delay: 1s;
-  animation-duration: 2s;
+  animation-delay: 2s;
+  animation-duration: 1s;
   }
 
  
@@ -1821,7 +1820,7 @@ background-image:none;
   transform: translateY(-210px);
   transition: opacity 1s,visibility 1s, transform 1s;
   animation-delay: 2s;
-  animation-duration: 2s;
+  animation-duration: 1s;
   }
 
   .block{
