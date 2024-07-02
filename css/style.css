@@ -1656,7 +1656,9 @@ div, figure, figucaption, img {
   display: none;
 }
 
-
+.sp_works_img{
+  display: none;
+}
 /*1600スマホ用スマホ用スマホ用スマホ用スマホ用スマホ用スマホ用スマホ用スマホ用スマホ用スマホ用スマホ用スマホ用スマホ用スマホ用*/  
 
 
@@ -1834,7 +1836,9 @@ font-style: italic;
 }
 
 .works_content p{
-  font-size: 0.8em;
+  font-size: 1em;
+  background-color: #000000;
+  width: 95%;
 }
 
 
