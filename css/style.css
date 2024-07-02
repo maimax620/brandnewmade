@@ -1837,7 +1837,7 @@ font-style: italic;
   color:#fff;
   width:100vw;
   opacity: 1; 
-  padding:20px 30px; 
+  padding:15px 30px 20px 50px; 
 }
 
 .works_content p{
@@ -1871,7 +1871,7 @@ background-image:none;
   }
 
   .sp_works_img{
-    background-color: pink;
+    background-color: #FFF;
      height: 20vh;
     width: 100vw;
 
