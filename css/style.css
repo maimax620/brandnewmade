@@ -1655,17 +1655,15 @@ div, figure, figucaption, img {
 .pc_none{
   display: none;
 }
-.sp_works_img,
-.sp_works_img img{
-  display: none;
-}
+
+  
 
 
 
 /*1600スマホ用スマホ用スマホ用スマホ用スマホ用スマホ用スマホ用スマホ用スマホ用スマホ用スマホ用スマホ用スマホ用スマホ用スマホ用*/  
 
 
-@media (max-width:768px) {
+@media (max-width:769px) {
  
   .sp_none{
     display: none;
@@ -1845,7 +1843,7 @@ font-style: italic;
 
 .works_content p{
   font-size: 1em;
-  background-color:green;
+ 
   width: 95%;
 }
 
@@ -1888,5 +1886,12 @@ background-image:none;
     
     
   }
+
+}
+
+/*PCのみに適応*/
+
+@media (min-width:770px){
+  .sp_works_img{display: none;}
 
 }
