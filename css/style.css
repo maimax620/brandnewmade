@@ -1821,7 +1821,7 @@ font-style: italic;
 
 /* WORKS */
 #works{
-  background-color: #39393a;
+  background-color:yellow;
 }
 
 .works_content{
@@ -1839,7 +1839,7 @@ font-style: italic;
 
 
 .work_space{
-  background-size: cover;
+  background-size:0%;
   height: 100%;
   display:block;
   filter:none;/*モノクロ具合を変更したい場合はこの数値を変更*/
