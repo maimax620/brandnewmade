@@ -1805,6 +1805,29 @@ background-image:none;
   transition:2s;
 }
 
+.js-left  {
+  opacity: 0;
+  transform: translateX(-200px);
+  transition: opacity 1s,visibility 1s, transform 1s;
+  animation-delay: 1s;
+  animation-duration: 2s;
+  }
+
+ 
+
+
+.js-up  {
+  opacity: 0;
+  transform: translateY(-210px);
+  transition: opacity 1s,visibility 1s, transform 1s;
+  animation-delay: 2s;
+  animation-duration: 2s;
+  }
+
+  .block{
+    display: block;
+  }
+
 
 }
 
