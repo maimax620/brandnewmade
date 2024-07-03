@@ -31,6 +31,19 @@ $(function(){
 	  // 次の画像をフェードイン
 	  $("#slide li:nth-child(" + next + ")").fadeIn(duration);
   
+ // 変数currentの新しい値：変数nextの元の値
+ current = next;
+
+ // 変数nextの新しい値：変数currentの新しい値+1
+ next = ++next;
+
+
+ // 変数nextの値が3（画像の総数）を超える場合、1に戻す
+ if(next > count){
+   next = 1;
+}
+
+
 
 //ヘッダーのカラーチェンジ用
 
