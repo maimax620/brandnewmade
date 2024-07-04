@@ -1389,6 +1389,12 @@ width:100%;
 background:#999;
   /*動き*/
 transition: all 0.6s;
+background-image: url(../images/menu_bg.png);
+background-position:top;
+
+background-repeat: no-repeat;
+background-size: 100%;
+opacity: ;
 }
 
 /*アクティブクラスがついたら位置を0に*/
@@ -1415,13 +1421,14 @@ transition: all 0.6s;
   top:50%;
   left:50%;
   transform: translate(-50%,-50%);
-}
 
+}
 /*リストのレイアウト設定*/
 
 #g-nav li{
 list-style: none;
   text-align: center;
+  font-size: 1.5em;
 }
 
 #g-nav li a{
@@ -1432,6 +1439,11 @@ display: block;
 text-transform: uppercase;
 letter-spacing: 0.1em;
 font-weight: bold;
+}
+
+.bold_menu{
+  font-weight: 700;
+  color: #000;
 }
 
 /*========= ボタンのためのCSS ===============*/
