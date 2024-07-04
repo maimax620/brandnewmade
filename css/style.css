@@ -1628,6 +1628,8 @@ div, figure, figucaption, img {
  z-index: 1;
  top: 50%; 
  left:50%;
+ color: #FFF;
+ font-size: 2em;
  transform: translate(-50%, -50%);
 
 }
