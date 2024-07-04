@@ -274,12 +274,11 @@ header{
  }
 #logo a{
  width: 100%;
-padding:25px;
+padding:25px 0px;
 margin-top: 10px;
-margin-left:5px;
 background-image: url(../images/logo_s.png);
 display: block;
-background-size: 100%;
+background-size: 90%;
 background-repeat: no-repeat;
 background-position: center;
 
