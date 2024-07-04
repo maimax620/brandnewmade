@@ -1443,7 +1443,7 @@ opacity: ;
 #g-nav li{
 list-style: none;
   text-align: center;
-  font-size: 1.5em;
+  font-size: 1.7em;
 }
 
 #g-nav li a{
@@ -1453,12 +1453,15 @@ padding:10px;
 display: block;
 text-transform: uppercase;
 letter-spacing: 0.1em;
-font-weight: bold;
-}
+font-weight: 700;}
 
 .bold_menu{
-  font-weight: 700;
+ 
   color: #000;
+}
+
+.white_menu{
+   color: #FFF;
 }
 
 /*========= ボタンのためのCSS ===============*/
