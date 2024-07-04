@@ -1619,19 +1619,16 @@ div, figure, figucaption, img {
        padding: 0px;
      }
      .logo img{
-      width: 220px;
+      width: 200px;
      }
 
      
 .logo_l{
-  position: absolute;
+  position:absolute;
  z-index: 1;
  top: 50%; 
- left: 50%;
+ left:50%;
  transform: translate(-50%, -50%);
-color:#FFF;
-font-size:1.5em;
-
 
 }
 
