@@ -418,7 +418,7 @@ background-color: #333;
  	position: absolute;
 	z-index: 1;
   top: 50%;
-	left: 60%;
+	left: 50%;
 	transform: translate(-50%, -50%);
 
 }
@@ -1633,14 +1633,12 @@ div, figure, figucaption, img {
  top: 50%;
  left: 50%;
  transform: translate(-50%, -50%);
+ background-image: url(/images/logo.png);
+ background-size: cover;
+ padding: 160px;
 
 }
 
-
-
-    .logo_l img{
-      width:250px;
-    }
 
    /*========= スライダー===============*/
     #slide{
