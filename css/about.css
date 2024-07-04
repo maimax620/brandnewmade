@@ -201,8 +201,11 @@ list-style:none;
   /*物件詳細ページ */
 #about{
   width: 100vw;
- height: 250px;
-  background-color: var(--bg_colorbk); 
+ height: 180px;
+ background-image: url(/images/top02.jpg);
+background-size: cover;
+
+
 
  
 }
@@ -214,11 +217,16 @@ text-align: center;
 
 }
 
+.about_header span{
+  color: #FFF;
+}
+
 #about h2 {
   font-size: 1.8em;
   line-height: 0.5em; 
   padding-bottom: 0px;
   letter-spacing: 3px;
+  color: #FFF;
 
 }
 
