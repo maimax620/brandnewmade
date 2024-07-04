@@ -1633,7 +1633,7 @@ div, figure, figucaption, img {
  top: 50%;
  left: 50%;
  transform: translate(-50%, -50%);
- background-image: url(/images/logo.png);
+ background-image: url(images/logo.png);
  background-size: cover;
  padding: 160px;
 
