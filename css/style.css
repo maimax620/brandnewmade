@@ -1609,6 +1609,23 @@ div, figure, figucaption, img {
        padding: 25px;
        margin: 50px 0px;
     }
+
+    .logo{
+      position: absolute;
+      width: 100%;
+       pointer-events:all;  
+       font-size: 13px;
+       left: -10px;
+       top: 10px;
+     }
+     .logo span{
+      position: absolute;
+      font-size: 8px;
+      left: 30px;
+      top: 20px;
+    
+     }
+
      
 .logo_l{
   position: absolute;
