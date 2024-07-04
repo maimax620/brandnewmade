@@ -435,12 +435,10 @@ background-color: #333;
   top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-
+  
 }
 
-.logo_l img{
-  width:75%;
-}
+
 
 
 
@@ -1661,7 +1659,18 @@ div, figure, figucaption, img {
  color: #FFF;
  font-size: 2em;
  transform: translate(-50%, -50%);
+font-size: 4em;
+font-family:  Cambria,Helvetica, Lucida Sans;
+line-height: 1.2em;
+font-weight: 800;
+text-align: center;
+}
 
+.logo_l span{
+  display: block;
+  font-size:2rem;
+  font-weight: 400;
+  text-align: center;
 }
 
 
