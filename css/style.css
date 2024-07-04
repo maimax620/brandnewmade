@@ -269,14 +269,14 @@ header{
 
 #logo{
 
-  width: 200px;
+  width: 230px;
    pointer-events:all;  
  }
 #logo a{
  width: 100%;
 padding:25px;
 margin-top: 10px;
-margin-left: 10px;
+margin-left:5px;
 background-image: url(../images/logo_s.png);
 display: block;
 background-size: 100%;
@@ -1447,7 +1447,7 @@ list-style: none;
 }
 
 #g-nav li a{
-color: #333;
+color: #636262;
 text-decoration: none;
 padding:10px;
 display: block;
@@ -1461,14 +1461,14 @@ font-weight: 700;}
 }
 
 .white_menu{
-   color: #FFF;
+   color: #f4f5f6;
 }
 
 /*========= ボタンのためのCSS ===============*/
 .openbtn1{
 position:fixed;
   z-index: 9999;/*ボタンを最前面に*/
-top:25px;
+top:37px;
 cursor: pointer;
   width: 50px;
   height:50px;
@@ -1889,7 +1889,11 @@ background-image:none;
   .block{
     display: block;
   }
-
+/*========= ボタンのためのCSS ===============*/
+.openbtn1{
+    top:22px;
+   
+  }
 
 }
 
