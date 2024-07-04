@@ -202,7 +202,7 @@ list-style:none;
 #about{
   width: 100vw;
  height: 180px;
- background-image: url(/images/top02.jpg);
+ background-image: url(../images/top02.jpg);
 background-size: cover;
 
 
