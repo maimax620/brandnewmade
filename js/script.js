@@ -191,6 +191,32 @@ jQuery(function(){
 });
 
 
+jQuery(function(){
+
+	var line = jQuery('#logo a');
+	jQuery(window).scroll(function () {
+		if (jQuery(this).scrollTop() >700) { //スクロールが越えたら
+			line.addClass('black');
+      
+		} else { //スクロールが指定を越えなければクラスを外す
+			line.removeClass('black');
+		}});
+
+});
+jQuery(function(){
+
+	var line = jQuery('#logo a');
+	jQuery(window).scroll(function () {
+		if (jQuery(this).scrollTop() >1500) { //スクロールが越えたら
+			line.addClass('white');
+      
+		} else { //スクロールが指定を越えなければクラスを外す
+			line.removeClass('white');
+		}});
+
+});
+
+
 
 
 // 変数currentの新しい値：変数nextの元の値

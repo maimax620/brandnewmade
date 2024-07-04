@@ -267,18 +267,33 @@ header{
 
 
 
-.logo{
+#logo{
 
   width: 200px;
    pointer-events:all;  
  }
- .logo span{
-  position: absolute;
-  font-size: 10px;
-  left: 30px;
-  top: 30px;
+#logo a{
+ width: 100%;
+padding:25px;
+margin-top: 10px;
+margin-left: 10px;
+background-image: url(../images/logo_s.png);
+display: block;
+background-size: 100%;
+background-repeat: no-repeat;
+background-position: center;
 
  }
+
+#logo a.black  {
+ background-image: url(../images/logo_s_gray.png);
+  }
+
+  #logo a.white  {
+    background-image: url(../images/logo_s.png);
+     }
+   
+
 .menu{
   flex: 1;
  margin-top: 20px; 
