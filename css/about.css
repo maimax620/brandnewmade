@@ -66,8 +66,25 @@ line-height: 2.5em;
 
 }
 
-
-
+/*FLOWページ*/
+#flow{
+  background-color: blue;
+}
+.flow_cont{
+  background-color: yellow;
+  width: 100%;
+  padding: 0px 50px;
+  display: flex;
+}
+.flow_box{ 
+  background-color: red;
+  flex: 1 ;
+  width: 50%;
+}
+.flow_box img{background-color:black;}
+.flow_title{background-color: pink;}
+.flow_box p{color:green;}
+.flow_box button{color:red;}
 
 /*==================================================
 スライダーのためのcss
@@ -341,8 +358,5 @@ list-style:none;
 }
 
 
+/*WORKS一覧ページ*/
 
-
-
-
-}

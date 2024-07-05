@@ -9,7 +9,6 @@
   --base_color:#7c7c7c;
  
    }
-
    /*ボックスサイズ算出をborer-boxに */
 *,
 *:before,
@@ -268,17 +267,18 @@ header{
 
 
 #logo{
-
-  width: 230px;
+  position: absolute;
    pointer-events:all;  
+   top: 0;
+   left: 0;
+   
  }
 #logo a{
- width: 100%;
-padding:25px 0px;
-margin-top: 10px;
+ width: 80px;
+height: 80px;
 background-image: url(../images/logo_s.png);
 display: block;
-background-size: 90%;
+background-size: 100%;
 background-repeat: no-repeat;
 background-position: center;
 
@@ -296,6 +296,7 @@ background-position: center;
 .menu{
   flex: 1;
  margin-top: 20px; 
+ margin-left: 60px;
  pointer-events:all;  
 }
 
@@ -1063,7 +1064,7 @@ animation: skewanime .5s forwards;/*アニメーションの名前と速度を�
   display: inline-block;
   animation-fill-mode:forwards;
   animation-duration:3s;
-  animation-delay: inherit;
+  animation-delay: 1s;
 }
  @keyframes textAnime {
   100% {
@@ -1116,6 +1117,7 @@ animation: skewanime .5s forwards;/*アニメーションの名前と速度を�
   animation-name:fadeUpAnime;
   animation-duration:0.5s;
   animation-fill-mode:forwards;
+  animation-delay: 2d;
   opacity:0;
   }
   
@@ -1643,10 +1645,10 @@ div, figure, figucaption, img {
        font-size: 13px;
        left: -10px;
        top:8px;
-       padding: 0px;
+       padding: 100px;
      }
      .logo img{
-      width: 168px;
+      width:60px;
      }
 
      
@@ -1656,19 +1658,20 @@ div, figure, figucaption, img {
  top: 50%; 
  left:50%;
  color: #FFF;
- font-size: 3em;
+ font-size: 2.4em;
  transform: translate(-50%, -50%);
 font-family:  Cambria,Helvetica, Lucida Sans;
-line-height: 1.2em;
+line-height: 1.5em;
 font-weight: 800;
-text-align: center;
+text-align: left;
+text-shadow: 2px 3px 3px rgba(0, 0, 0, 0.47);
 }
 
 .logo_l span{
   display: block;
   font-size:2rem;
   font-weight: 400;
-  text-align: center;
+  text-align: left;
 }
 
 .logo_l img{
