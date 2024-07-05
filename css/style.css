@@ -1671,6 +1671,10 @@ text-align: center;
   text-align: center;
 }
 
+.logo_l img{
+  width:250px;
+}
+
 
 
 
@@ -1718,7 +1722,6 @@ text-align: center;
   width: 100%;
 
 }
-
 
 
 
