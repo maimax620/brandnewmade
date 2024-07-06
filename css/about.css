@@ -1,28 +1,5 @@
 @charset "UTF-8";
-h2 {
-  font-size: 1.8em;
-  line-height:1em; 
-  padding-bottom: 0px;
-  letter-spacing: 3px;
-  animation-name:title_Anime;
-  animation-duration:2s;
-  animation-fill-mode:forwards;
-  opacity:0;
-  text-transform: uppercase;
-  font-weight: bold;
-}
 
-  @keyframes title_Anime{
-    from {
-      opacity: 0;
-    transform: translateY(100px);
-    }
-  
-    to {
-      opacity: 1;
-    transform: translateY(0);
-    }
-  }
 
 
 /*物件詳細ページ */
@@ -47,11 +24,15 @@ text-align: center;
   font-size: 1em;
   padding: 10px 0px;
 }
-.about_header h2{
+.header_h2,
+.header_h2:after{
 font-size: 4em;
 letter-spacing: 5px;
-
+border: none;
+padding: 0px;
+margin: 0px ;
 }
+
 .about_title{
   font-size: 3em;
 font-weight: bold;
@@ -104,9 +85,9 @@ line-height: 2.5em;
 }
 .flow02_box{ 
   background-color: pink;
-  flex: 1 ;
-  padding:0px;
-  margin: 25px;
+  flex: 1;
+  padding:20px;
+  min-width:50%;
 }
 .flow02_box img{}
 
