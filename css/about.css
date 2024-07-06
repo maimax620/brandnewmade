@@ -1,4 +1,28 @@
 @charset "UTF-8";
+h2 {
+  font-size: 1.8em;
+  line-height:1em; 
+  padding-bottom: 0px;
+  letter-spacing: 3px;
+  animation-name:title_Anime;
+  animation-duration:2s;
+  animation-fill-mode:forwards;
+  opacity:0;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+  @keyframes title_Anime{
+    from {
+      opacity: 0;
+    transform: translateY(100px);
+    }
+  
+    to {
+      opacity: 1;
+    transform: translateY(0);
+    }
+  }
 
 
 /*物件詳細ページ */
@@ -26,7 +50,7 @@ text-align: center;
 .about_header h2{
 font-size: 4em;
 letter-spacing: 5px;
-font-weight: bold;
+
 }
 .about_title{
   font-size: 3em;
@@ -109,15 +133,23 @@ OFFICEページ PC用
 ===================================*/
 
 #plofile{
-  background-color:greenyellow;
-  margin: 0px auto;
+    margin: 100px auto;
  
+ 
+}
+
+.waku{
+  border: 1px solid #ccc;
+  padding: 20px 20px  50px 20px;
 }
 .plo_text{
   line-break: anywhere;
  
 }
 .plo_title{
+  background-color: #ddd;
+  margin:20px 0px;
+  display: block;
  
 }
 
@@ -250,30 +282,7 @@ list-style:none;
 
 @media (max-width:789px) {
 
-  h2 {
-    font-size: 1.8em;
-    line-height: 1.8; 
-    padding-bottom: 50px;
-    letter-spacing: 3px;
-    animation-name:title_Anime;
-    animation-duration:2s;
-    animation-fill-mode:forwards;
-    opacity:0;
-  }
-  
-    @keyframes title_Anime{
-      from {
-        opacity: 0;
-      transform: translateY(100px);
-      }
-    
-      to {
-        opacity: 1;
-      transform: translateY(0);
-      }
-    }
-  
-  
+ 
   
 
 
@@ -301,7 +310,7 @@ text-align: center;
 }
 
 #about h2 {
-  font-size: 1.8em;
+  font-size: 2em;
   line-height: 0.5em; 
   padding-bottom: 0px;
   letter-spacing: 3px;
@@ -370,6 +379,7 @@ line-height: 2.5em;
   background-image: url(/images/top04.jpg);
   padding: 50px 0px;
   background-size: cover;
+  flex: 1;
 }
 
 
@@ -377,6 +387,7 @@ line-height: 2.5em;
   background-image: url(/images/top05.jpg);
   padding: 50px 0px;
   background-size: cover;
+  flex: 1;
 }
 
 

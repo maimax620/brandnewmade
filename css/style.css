@@ -274,8 +274,8 @@ header{
    
  }
 #logo a{
- width: 80px;
-height: 80px;
+ width: 60px;
+height: 60px;
 background-image: url(../images/logo_s.png);
 display: block;
 background-size: 100%;
@@ -440,11 +440,6 @@ background-color: #333;
 
 
 
-
-
-
-
-
 /* お問いあわせバナー */
 
 .contact_banner{
@@ -505,13 +500,6 @@ background-color: #333;
   font-size: 25px;
   line-height: 2em;
 
-}
-
-h2 {
-  font-size: 38px;
-  line-height: 45px; 
-  padding-bottom: 10px;
-  letter-spacing: 3px;
 }
 
 .bold{font-weight: bold;}
@@ -1404,11 +1392,11 @@ background:#999;
   /*動き*/
 transition: all 0.6s;
 background-image: url(../images/menu_bg.png);
-background-position:top;
+background-position:top left;
 
 background-repeat: no-repeat;
-background-size: 100%;
-opacity: ;
+background-size: 50%;
+opacity: 1;
 }
 
 /*アクティブクラスがついたら位置を0に*/
@@ -1611,6 +1599,12 @@ div, figure, figucaption, img {
   background-color: #333;
 
 }
+
+#g-nav{
+background-position:top left;
+background-size: 100%;
+}
+
 
   header{
     top: 15px;
