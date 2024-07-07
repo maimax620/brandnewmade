@@ -1060,7 +1060,7 @@ animation: skewanime .5s forwards;/*アニメーションの名前と速度を�
   transform: translateX(-50px);
   transition: opacity 1s,visibility 1s, transform 1s;
   animation-delay: 1s;
-  animation-duration: 2s;
+  animation-duration: 1s;
   }
 
  
