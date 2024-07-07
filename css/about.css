@@ -90,11 +90,11 @@ line-height: 2.5em;
 .flow02_box{ 
   flex: 1;
   padding:0px;
-  margin: 20px;
+  margin: 30px;　
 }
 
 .flow02_box h3{ 
-  padding: 7.5px 15px;
+  padding: 7.5px;
 display: block;
   position:relative;
   width: 100%;
@@ -291,7 +291,15 @@ list-style:none;
  height:250px;
 }
 
+.banner_works{
+  background-image: url(/images/about04.jpg);
+ background-size: cover;
+}
 
+.banner_office{
+  background-image: url(/images/about02.jpg);
+ background-size: cover;
+}
 
 
 .about_header{
