@@ -1696,13 +1696,11 @@ background-size: 100%;
  transform: translate(-60%, -50%);
 line-height: 1.8em;
 text-shadow: 2px 3px 3px rgba(0, 0, 0, 0.47);
-padding: 20px;
 font-family: "Courgette", cursive;
 font-weight: 200;
 font-style: italic;
 }
 .logo_l span{
-  white-space: nowrap;
   }
 
 
