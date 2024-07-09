@@ -223,29 +223,25 @@ list-style:none;
 
 .flow02_box{ 
   flex: 1;
-  padding:0px;
-  margin: 30px;　
-
+ 
 }
 
 .flow02_box h3{ 
-  padding: 7.5px;
+  padding: 10px;
   color: #000;
   text-align: center;
   font-weight: 600;
 
-
 }
 .flow02_box img{
   border-radius: 20px;
-}
+ }
 
 .flow02_box p{
   font-size: 0.8em;
   padding: 15px 15px 15px ;
 }
 
-.flow02_box button{color:red;}
 
 .flow_bt{
   background-color:none;
@@ -268,12 +264,9 @@ list-style:none;
 
 
 @media (max-width:450px) {
-  .flow02_cont{
-    padding: 30px 0px;
-    display: block;
-  }
+
   .flow02_box{ 
-    width: 85%;
+    width: 75%;
     padding:0px;
     margin: 0px auto;
     flex: none;
@@ -302,7 +295,7 @@ list-style:none;
 }
 
 .banner_works{
-  background-image: url(/images/about04.jpg);
+  background-image: url(/images/about03.jpg);
  background-size: cover;
 }
 
