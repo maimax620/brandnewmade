@@ -473,15 +473,6 @@ background-color: #333;
     }
 
 
- 
-.logo_l{
- 	position: absolute;
-	z-index: 1;
-  top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-  
-}
 
 
 
@@ -1640,6 +1631,7 @@ div, figure, figucaption, img {
 .s_top{
   position: relative;
   height:100vh;
+  width: 100vw;
   margin: 0;
   background-color:#FFF;
   background-repeat: repeat;
@@ -1683,27 +1675,19 @@ background-size: 100%;
        padding: 100px;
      }
      .logo img{
-      width:60px;
+      width:65px;
      }
-
-     
-.logo_l{
-  position:absolute;
- z-index: 1;
-
- color: #FFF;
- font-size: 2.5em;
- transform: translate(-60%, -50%);
-line-height: 1.8em;
-text-shadow: 2px 3px 3px rgba(0, 0, 0, 0.47);
-font-family: "Courgette", cursive;
-font-weight: 200;
-font-style: italic;
-}
-.logo_l span{
-  }
-
-
+ .cath{
+  position: absolute;
+  top: 30%;
+  left: 20%;
+  color: #FFF;
+  font-size: 4em;
+  z-index: 1;
+  font-family: "Nothing You Could Do", cursive;
+  font-weight: 400;
+  font-style: normal;
+ }
 
 
 .fadeIn {
