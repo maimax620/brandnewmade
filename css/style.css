@@ -1679,8 +1679,8 @@ background-size: 100%;
      }
  .cath{
   position: absolute;
-  top: 70%;
-   color: #FFF;
+  top: 65%;
+  color: #FFF;
   font-size: 4em;
   z-index: 1;
   font-family: "Nothing You Could Do", cursive;
@@ -1688,7 +1688,7 @@ background-size: 100%;
   font-style: normal;
   text-align: center;
   
-  text-shadow: 3px 4px 4px rgba(0, 0, 0, 0.4);
+  text-shadow: 3px 4px 4px rgba(0, 0, 0, 0.8);
 
  }
  .cath span{
