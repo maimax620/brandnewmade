@@ -1679,7 +1679,7 @@ background-size: 100%;
      }
  .cath{
   position: absolute;
-  top: 30%;
+  top: 70%;
    color: #FFF;
   font-size: 4em;
   z-index: 1;
@@ -1687,7 +1687,16 @@ background-size: 100%;
   font-weight: 400;
   font-style: normal;
   text-align: center;
+  
+  text-shadow: 3px 4px 4px rgba(0, 0, 0, 0.4);
 
+ }
+ .cath span{
+  padding: 10px;
+  margin: 0px 35px;
+  line-height: 45px;
+  display: block;
+ 
  }
 
 
