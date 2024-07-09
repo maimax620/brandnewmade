@@ -1693,14 +1693,14 @@ background-size: 100%;
  top: 50%; 
  left:50%;
  color: #FFF;
- font-size: 2.4em;
+ font-size: 4em;
  transform: translate(-50%, -50%);
 line-height: 1.5em;
-font-weight: 800;
-text-align: left;
 text-shadow: 2px 3px 3px rgba(0, 0, 0, 0.47);
-background-color: rgba(0, 0, 0, 0.2);
 padding: 20px;
+font-family: "Courgette", cursive;
+font-weight: 400;
+font-style: normal;
 }
 
 .logo_l span{
@@ -1708,10 +1708,6 @@ padding: 20px;
   font-size:2rem;
   font-weight: 400;
   text-align: left;
-}
-
-.logo_l img{
-  width:250px;
 }
 
 
