@@ -1679,7 +1679,8 @@ background-size: 100%;
      }
  .cath{
   position: absolute;
-  top: 50%;
+  top: 35%;
+  left: 10%;
   color: #FFF;
   font-size: 4em;
   z-index: 1;
