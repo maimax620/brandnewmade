@@ -222,8 +222,7 @@ list-style:none;
 /*FLOW一覧ページ*/
 
 .flow02_box{ 
-  flex: 1;
- 
+  flex: 1; 
 }
 
 .flow02_box h3{ 
@@ -235,6 +234,7 @@ list-style:none;
 }
 .flow02_box img{
   border-radius: 20px;
+  margin-top: 50px;
  }
 
 .flow02_box p{
@@ -246,9 +246,9 @@ list-style:none;
 .flow_bt{
   background-color:none;
   color: #777777;
-  border-radius: 10px;
+  border-radius: 0px;
   padding:5px 20px;
-  border: solid 2px #777777;
+  border: solid 1px #777777;
  display: block;
  margin: 0px auto 20px;
  width: 50%;
@@ -259,8 +259,17 @@ list-style:none;
 .flow_bt:hover{
   color: #FFF;
   background-color:#777777;
-  border: solid 2px #777;
+  border: solid 1px #777;
 }
+.flow02_box a{
+  font-style: italic;
+  position: relative;
+  padding: 0px;
+  font-size: 0.8em;
+  top: 0px;
+
+}
+
 
 
 @media (max-width:450px) {
@@ -272,9 +281,6 @@ list-style:none;
     flex: none;
   }
 }
-
-
-
 
 
 
