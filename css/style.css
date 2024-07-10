@@ -1679,7 +1679,7 @@ background-size: 100%;
      }
  .cath{
   position: absolute;
-  top: 65%;
+  top: 50%;
   color: #FFF;
   font-size: 4em;
   z-index: 1;
@@ -1687,10 +1687,29 @@ background-size: 100%;
   font-weight: 400;
   font-style: normal;
   text-align: center;
-  
   text-shadow: 3px 4px 4px rgba(0, 0, 0, 0.8);
+  animation-name:cath_anim;
+  animation-duration:3s;
+  animation-fill-mode:forwards;
+  opacity: 0;
+  animation-delay: 5s;
 
  }
+
+ @keyframes cath_anim{
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.randomAnime {
+  visibility: hidden;
+}
+
  .cath span{
   padding: 10px;
   margin: 0px 35px;
