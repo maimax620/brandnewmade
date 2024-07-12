@@ -1707,7 +1707,7 @@ background-size: 100%;
   animation-duration:3s;
   animation-fill-mode:forwards;
   opacity: 0;
-  animation-delay: 3s;
+  animation-delay: 2s;
   z-index: 1;
   text-align: center;
 
@@ -1790,10 +1790,10 @@ background-size: 100%;
   
   .slide_img01{
       animation-name:zoom-in;
-      animation-duration:3s;
+      animation-duration:1s;
       animation-fill-mode:forwards;
       width: 100vw;
-      animation-delay: 1s;
+      animation-delay: 0s;
       animation-iteration-count:1;
       height:100vh;
   

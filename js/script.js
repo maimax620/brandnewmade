@@ -9,7 +9,7 @@ $(function(){
 	var next = 2;
   
 	// フェードイン/アウトのインターバル（何秒ごとに画像を切り替えるか。）
-	var interval = 4000;
+	var interval = 4800;
   
 	// フェードイン/アウトのスピード
 	var duration = 1200;
@@ -39,11 +39,8 @@ $(function(){
 
 
  // 変数nextの値が3（画像の総数）を超える場合、1に戻す
- if(next > count){
-   next = 1;
-}
-
-
+ if(next > count){ next = 1;}
+	
 
 //ヘッダーのカラーチェンジ用
 
