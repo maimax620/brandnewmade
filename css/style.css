@@ -1087,7 +1087,7 @@ animation: skewanime .5s forwards;/*アニメーションの名前と速度を�
   animation: textAnime;
   display: inline-block;
   animation-fill-mode:forwards;
-  animation-duration:2s;
+  animation-duration:2.5s;
   animation-delay: 1s;
   font-size: 2em;
  
@@ -1678,7 +1678,8 @@ background-size: 100%;
     .contact_banner{
       background-color: var(--bg_color03);
        padding: 25px;
-       margin: 50px 0px;
+       margin: 50px  0px 0px  0px;
+       text-align: center;
     }
 
     .logo{
@@ -1969,7 +1970,7 @@ background-image:none;
   opacity: 0;
   transform: translateX(-50px);
   transition: opacity 1s,visibility 1s, transform 1s;
-  animation-delay: 2s;
+  animation-delay: 1s;
   animation-duration: 1s;
   }
 

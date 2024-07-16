@@ -227,7 +227,6 @@ list-style:none;
 
 .flow02_box h3{ 
   padding: 10px;
-  color: #000;
   text-align: center;
   font-weight: 600;
 
@@ -239,7 +238,7 @@ list-style:none;
 
 .flow02_box p{
   font-size: 0.8em;
-  padding: 15px 15px 15px ;
+  padding: 0px 15px 15px ;
 }
 
 
@@ -298,6 +297,10 @@ list-style:none;
 #about{
   width: 100vw;
  height:250px;
+}
+
+.about_dic{
+  padding: 20px 0px;
 }
 
 .banner_works{
