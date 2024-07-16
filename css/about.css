@@ -78,7 +78,7 @@ OFFICEページ PC用
 ===================================*/
 
 #plofile{
-    margin: 100px auto;
+    margin: 50px auto;
  
  
 }
@@ -309,7 +309,12 @@ list-style:none;
 }
 
 .banner_office{
-  background-image: url(/images/about02.jpg);
+  background-image: url(/images/office_banner.jpg);
+ background-size: cover;
+}
+
+.banner_about{
+  background-image: url(/images/works_banner.jpg);
  background-size: cover;
 }
 
@@ -418,6 +423,30 @@ margin: 0px;
   display: block;
  
 }
+
+
+
+
+.office_img{
+  margin: 50px 0px 0px;
+  animation-name: gray;
+  animation-duration:5s;
+  animation-fill-mode:forwards;
+  width: 100vw;
+  animation-delay: 2s;
+  animation-iteration-count:1;
+}
+
+
+@keyframes gray{
+0% { filter: grayscale(100%);}
+60% { filter: grayscale(100%);}
+80% { filter: grayscale(50%);}
+ 100% {filter: grayscale(0%); }
+  
+  }
+
+  
 
 /*==================================================
 PLOFILE スマホ
