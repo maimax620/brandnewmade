@@ -223,6 +223,8 @@ list-style:none;
 
 .flow02_box{ 
   flex: 1; 
+  padding: 0px 30px;
+  
 }
 
 .flow02_box h3{ 
@@ -234,11 +236,15 @@ list-style:none;
 .flow02_box img{
   border-radius: 20px;
   margin-top: 50px;
+  max-width: 80vw;
+  display: table-cell;
+ 
  }
 
 .flow02_box p{
   font-size: 0.8em;
   padding: 0px 15px 15px ;
+
 }
 
 
@@ -246,7 +252,6 @@ list-style:none;
   background-color:none;
   color: #777777;
   border-radius: 0px;
-  padding:5px 20px;
   border: solid 1px #777777;
  display: block;
  margin: 0px auto 20px;
@@ -263,7 +268,7 @@ list-style:none;
 .flow02_box a{
   font-style: italic;
   position: relative;
-  padding: 0px;
+  padding: 15px;
   font-size: 0.8em;
   top: 0px;
 
@@ -315,7 +320,9 @@ list-style:none;
 
 .banner_about{
   background-image: url(/images/works_banner.jpg);
- background-size: cover;
+ background-size: cover; 
+ background-position:right;
+
 }
 
 

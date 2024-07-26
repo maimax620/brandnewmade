@@ -479,7 +479,7 @@ background-color: #333;
 /* お問いあわせバナー */
 
 .contact_banner{
-  background-color: var(--bg_color03);
+  background-color: #FFFFFF;
    padding: 25px;
    margin: 100px 150px 0px;
 }
@@ -698,8 +698,9 @@ figure.snip {
   width: 100%;
   color: #ffffff;
   text-align: left;
-  font-size: 16px;
+  font-size: 1.25em;
   background-color: #000000;
+  text-align: center;
 }
 figure.snip * {
   -webkit-box-sizing: border-box;
@@ -767,12 +768,19 @@ figure.snip i {
 }
 figure.snip a {
   position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  top: 70%;
+  bottom: 15%;
+  left: 20%;
+  right: 20%;
   z-index: 1;
+  border: #fff solid 1px;
+  color: #FFF;
+ 
 }
+
+
+
+
 figure.snip:hover img,
 figure.snip.hover img {
   zoom: 1;
@@ -1676,7 +1684,7 @@ background-size: 100%;
     }
 
     .contact_banner{
-      background-color: var(--bg_color03);
+      background-color:#FFFFFFF;
        padding: 25px;
        margin: 50px  0px 0px  0px;
        text-align: center;
@@ -1938,6 +1946,7 @@ background-image:none;
     
     
   }
+
 
   /*========= ワークスモア ===============*/
 .more_area{
