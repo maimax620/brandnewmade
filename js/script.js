@@ -371,3 +371,8 @@ $(".openbtn1").click(function () {//ボタンがクリックされたら
 	  $(this).removeClass("hover");
 	}
   );
+
+//Slick
+  $('.visual').slick({
+	dots: true,
+   });
