@@ -9,71 +9,114 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css">
  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+ <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
  <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/about.css">
 <style>
-
-body {
-	position: relative;
-}
-.modal-btn {
-  display: block;
-  margin: 0 auto;
-  color: #fff;
-  font-weight: bold;
-  background-color: #00a5a0;
-  box-shadow: 0 5px 0 #008480;
-  text-align: center;
-  text-decoration: none;
-  width: 200px;
-  height: 50px;
-  line-height: 50px;
-  border-radius: 60px;
-  border: none;
-
-  &:hover {
-    box-shadow: none;
-    transform: translateY(5px);
-	cursor: pointer;
-  }
+/* ---------------------------- */
+/* --- Base --- */
+/* ---------------------------- */
+.swiperModalButton {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px;
+    justify-content: space-around;
 }
 
-.modal-content {
-	width: 100%;
-    height: 100%;
-    border: none;
-    background-color: rgba(0,0,0,0.8);
-}
-.modal-content-inner {
-	position: absolute;
-	top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-	padding: 30px;
-	width: 60%;
-	background-color: #fff;	
-}
-
-.section {
+/* モーダル */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
   padding: 30px;
-  background-color: #dff0ef;
-
-  &:nth-of-type(2n) {
-    background-color: #d9e8e7;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s;
+  pointer-events: none;
+  opacity: 0;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.9);
 }
 
-.section-title,
-.modal-title {
-  font-size: 20px;
-  font-weight: bold;
-  text-align: center;
+/* モーダルがactiveの時 */
+.modal.is-active {
+  opacity: 1;
+  pointer-events: auto;
 }
 
-p {
-  margin: 0 0 10px;
+/* モーダル背景のオーバーレイ部分 */
+.modal__overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
 }
 
+/* モーダルのコンテンツ */
+.modal__content {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+}
+.modal_inner {
+    filter: drop-shadow(0px 0px 4px red);
+    background: #151515;
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 2px;
+    padding: 20px 25px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* 閉じるボタン */
+.modal__close-btn {
+    position: absolute;
+    right: 0;
+    top: -40px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    z-index: 20;
+}
+.modal__close-btn:hover {
+    opacity: 0.8;
+}
+
+/* 閉じるボタンのX */
+.lineClose {
+    display: inline-block;
+    vertical-align: middle;
+    color: #313131;
+    line-height: 1;
+    width: 2rem;
+    height: 0.1rem;
+    background: currentColor;
+    border-radius: 0.1rem;
+    position: relative;
+    transform: rotate(45deg);
+}
+.lineClose::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  border-radius: inherit;
+  transform: rotate(90deg);
+}
+p.swiperText {
+    margin: 0;
+    text-align: center;
+}
 </style>
 
 
@@ -105,6 +148,8 @@ p {
     
         </div>
        </header>
+   <!--ここからコンテンツ-->
+
  
 
    <div id="about" class="banner_works">
@@ -114,62 +159,36 @@ p {
         </div>
    </div> 
      
-   <!--ここからコンテンツ-->     
-   <section class="section">
-    <p class="section-title">Area 1</p>
-  <button class="modal-btn" popovertarget="popover-modal" popovertargetaction="show">ここをクリック</button>
-  
-  <div id="popover-modal" popover="auto" class="modal-content">
-    <div class="modal-content-inner">
-   
-   <ul class="gallery">
-      <li><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-4/img/01.jpg" alt=""></li>
-      <li><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-4/img/02.jpg" alt=""></li>
-      <li><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-4/img/03.jpg" alt=""></li>
-      <li><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-4/img/04.jpg" alt=""></li>
-      <li><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-4/img/05.jpg" alt=""></li>
-      <li><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-4/img/06.jpg" alt=""></li>
-      <li><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-4/img/03.jpg" alt=""></li>
-      <li><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-4/img/04.jpg" alt=""></li>
-     
-    </ul>
-    <ul class="choice-btn">
-      <li><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-4/img/01.jpg" alt=""></li>
-      <li><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-4/img/02.jpg" alt=""></li>
-      <li><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-4/img/03.jpg" alt=""></li>
-      <li><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-4/img/04.jpg" alt=""></li>
-      <li><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-4/img/05.jpg" alt=""></li>
-      <li><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-4/img/06.jpg" alt=""></li>
-      <li><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-4/img/03.jpg" alt=""></li>
-      <li><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-4/img/04.jpg" alt=""></li>
-      
-       </ul>
-      <button class="modal-btn" popovertarget="popover-modal" popovertargetaction="hidden">閉じる</button> 
-    </div>
-    </div>
-  </section>
-
-
-  
-  <section class="section">
-    <p class="section-title">Area 2</p>
-    <p>この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。</p>
-    <p>この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。</p>
-  </section>
-  <section class="section">
-    <p class="section-title">Area 3</p>
-    <p>この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。</p>
-  </section>
-  <section class="section">
-    <p class="section-title">Area 4</p>
-    <p>この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。</p>
-    <p>この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。</p>
-    <p>この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。</p>
-  </section>
-<!--ここまで-->
-
-  
-  <!--制作事例一覧END--> 
+   <!--ここからモーダルボタン-->     
+   <div class="javaSample">
+     <div class="swiperModalButton">
+       <button class="modalOpen" data-modal="1"><img src="/images/about01.jpg" alt="slowjam"></button>
+          </div>
+ 
+     <!-- モーダル -->
+     <div class="modal" id="modal">
+       <div class="modal__overlay modalClose"></div>
+       <div class="modal__content">
+         <div class="modal_inner">
+         <div class="modal__close-btn modalClose" aria-label="閉じる"><span class="lineClose"></span></div>
+         <!-- スライダー -->
+         <div class="swiper modalInSlider">
+           <div class="swiper-wrapper">
+             <div class="swiper-slide modalInSlider"><p class="swiperText"><img src="/images/about01.jpg"></p></div>
+             <div class="swiper-slide modalInSlider"><img src="/images/about03.jpg"></div>
+             <div class="swiper-slide modalInSlider"><p class="swiperText">スライド3</p></div>
+             <div class="swiper-slide modalInSlider"><p class="swiperText">スライド4</p></div>
+             <div class="swiper-slide modalInSlider"><img src="/images/about04.jpg"></div>
+             <div class="swiper-slide modalInSlider"><p class="swiperText">スライド6</p></div>
+           </div>
+         </div>
+         </div>
+           <div class="swiper-button-prev"></div>
+           <div class="swiper-button-next"></div>
+       </div>
+     </div>
+ <!-- ここまで -->
+ </div>
 <!--FOOTER 下層ページ共通--> 
 
 <div class="contact_banner">
@@ -186,6 +205,42 @@ p {
   <div class="copy">copyright@BrandNewMade</div>    
 </footer>   <!--FOOTER 下層ページ共通END-->         
 </div>
+<script>window.addEventListener("DOMContentLoaded", () => {
+  // モーダルを取得
+  const modal = document.getElementById("modal");
+  // モーダルを開く
+  const openModalBtns = document.querySelectorAll(".modalOpen");
+  // モーダルを閉じる
+  const closeModalBtns = document.querySelectorAll(".modalClose");
+
+  // Swiperの設定
+  const swiper = new Swiper(".swiper", {
+    loop: true,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    spaceBetween: 30, //任意のマージン
+  });
+
+  // モーダルのボタンクリック
+  openModalBtns.forEach((openModalBtn) => {
+    openModalBtn.addEventListener("click", () => {
+      // data-modalで設定したスライド番号を取得
+      const modalIndex = openModalBtn.getAttribute('data-modal');
+      swiper.slideTo(modalIndex);
+      modal.classList.add("is-active");
+    });
+  });
+
+  // モーダルの閉じるボタンクリック
+  closeModalBtns.forEach((closeModalBtn) => {
+    closeModalBtn.addEventListener("click", () => {
+      modal.classList.remove("is-active");
+    });
+  });
+});
+    </script>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <script src="js/jquery.inview.min.js"></script>
