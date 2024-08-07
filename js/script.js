@@ -374,5 +374,5 @@ $(".openbtn1").click(function () {//ボタンがクリックされたら
 
 //Slick
   $('.visual').slick({
-	dots: true,
+	dots: false,
    });
