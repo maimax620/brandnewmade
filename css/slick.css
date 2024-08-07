@@ -119,7 +119,28 @@
 }
 
 /*========= Slick 自作CSS===============*/
+
+.works_modal_content{
+    color:#FFF;
+
+}
 .visual {
     background-color:none;
     margin-bottom: 60px;
+    
    }
+.visual_img{
+    width: 100vw;
+}
+
+.visual_text{
+    font-size: 1.5rem;
+    padding-top: 40px;
+}
+.visual_title{
+ font-size: 2rem;
+ padding: 40px 0px;
+
+}
+
+
