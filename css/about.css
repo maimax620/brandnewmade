@@ -504,15 +504,18 @@ list-style:none;
   list-style: none;
   position: relative;
   width: 80vw;
-  border-radius: 2px;
+  border-radius: 20px;
   margin: 0 auto;
-  background-color: #F2F2F2;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 .works_modal_open {
   height: 100%;
   text-align: center;
-}
+  }
+.works_modal_open img{
+  border-radius: 30px;
+
+  }
 .works_image_mask {
   position: absolute;
   top: 0;
@@ -524,6 +527,8 @@ list-style:none;
   -webkit-transition: all 0.6s ease;
   transition: all 0.6s ease;
   cursor: pointer;
+  border-radius: 30px;
+
 }
 .mask_text {
   font-size: 1rem;
@@ -542,7 +547,7 @@ list-style:none;
 .flow_title{
   font-size: 1em;
   line-height:1.3em; 
-  padding: 0px;
+  padding: 0px 0px 15px;
   margin: 10px 0px;
   letter-spacing: 3px;
   animation-name:title_Anime;
@@ -553,10 +558,10 @@ list-style:none;
   border-bottom:none;
   position: relative;
   bottom: -10px;
+  color: ;
   
 }
 .works_list_cont{
-
   padding: 0px 35px;
 }
 /* ------works_modal css------ */
