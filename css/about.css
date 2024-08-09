@@ -581,7 +581,7 @@ list-style:none;
 .works_modal_close {
   z-index: 500;
   position: absolute;
-  top: 10vh;
+  top: 20vh;
   right: 50px;
   color: #FFFFFF;
   font-size: 3rem;
