@@ -503,13 +503,14 @@ list-style:none;
 .works_item {
   list-style: none;
   position: relative;
-  width: 200px;
+  width: 80vw;
   border-radius: 2px;
   margin: 0 auto;
   background-color: #F2F2F2;
+  margin-bottom: 20px;
 }
 .works_modal_open {
-  height: 100px;
+  height: 100%;
   text-align: center;
 }
 .works_image_mask {
@@ -536,6 +537,27 @@ list-style:none;
 .works_image:hover .works_image_mask {
   opacity: 1;
   padding-top: 15%;
+}
+
+.flow_title{
+  font-size: 1em;
+  line-height:1.3em; 
+  padding: 0px;
+  margin: 10px 0px;
+  letter-spacing: 3px;
+  animation-name:title_Anime;
+  animation-duration:2s;
+  animation-fill-mode:forwards;
+  opacity:0;
+  font-weight: bold;
+  border-bottom:none;
+  position: relative;
+  bottom: -10px;
+  
+}
+.works_list_cont{
+
+  padding: 0px 35px;
 }
 /* ------works_modal css------ */
 .works_modal_wrapper {
