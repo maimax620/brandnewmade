@@ -558,7 +558,7 @@ list-style:none;
   max-width: 1000px;
   height: 100vh;
   margin: auto;
-  padding: 30vh 0px 0px;
+  padding: 10vh 0px 0px;
   background: rgba(0, 0, 0, 0.8);
   z-index: 1;
   overflow-y: hidden;
@@ -581,9 +581,9 @@ list-style:none;
 .works_modal_close {
   z-index: 500;
   position: absolute;
-  top: 30vh;
-  right: 30px;
-  color: #808080;
+  top: 10vh;
+  right: 50px;
+  color: #FFFFFF;
   font-size: 3rem;
   cursor: pointer;
 }

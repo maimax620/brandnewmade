@@ -126,7 +126,7 @@
 }
 .visual {
     background-color:none;
-    margin-bottom: 60px;
+    margin-bottom:0px;
     
    }
 .visual_img{
@@ -135,12 +135,13 @@
 
 .visual_text{
     font-size: 1.5rem;
-    padding-top: 40px;
+    padding-top: 20px;
 }
+
 .visual_title{
  font-size: 2rem;
- padding: 40px 0px;
-
+ line-height: 4em;
+font-weight: bold;
 }
 
 
