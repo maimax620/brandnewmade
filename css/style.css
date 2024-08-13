@@ -46,7 +46,9 @@ html {
   margin: 0px auto;
   padding: 50px;
 }
-
+.inner_bt_none{
+  padding: 20px 40px;
+}
 
 
 .point_on{
