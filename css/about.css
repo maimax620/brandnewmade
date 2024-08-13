@@ -611,7 +611,7 @@ list-style:none;
   background: rgba(0, 0, 0, 0.7);
 }
 .works_modal_close {
-  z-index: 1000;
+  z-index: 99999;
   position: absolute;
   top: 20%;
   right: 60px;
