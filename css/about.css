@@ -620,7 +620,7 @@ list-style:none;
   cursor: pointer;
 }
 .works_modal_close:hover {
-  color: #000;
+  color: #FFF;
   transition: all .5s;
 }
 html.is_open, body.is_open {
