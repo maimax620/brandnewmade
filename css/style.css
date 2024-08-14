@@ -1413,6 +1413,7 @@ form.contact-form ul li input[type="submit"] {
   font-family: inherit;
   font-size: inherit;
   transition: background border 0.35s ease;
+  color: purple;
 }
 form.contact-form ul li input[type="submit"]:focus {
   outline: none;
