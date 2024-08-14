@@ -309,8 +309,9 @@ list-style:none;
 }
 
 .banner_works{
-  background-image: url(/images/about03.jpg);
+  background-image: url(/images/stage04.jpg);
  background-size: cover;
+ background-position: bottom;
 }
 
 .banner_office{
@@ -611,7 +612,7 @@ list-style:none;
   background: rgba(0, 0, 0, 0.7);
 }
 .works_modal_close {
-  z-index: 99999;
+  z-index: 5;
   position: absolute;
   top: 20%;
   right: 60px;
