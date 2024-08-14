@@ -612,10 +612,10 @@ list-style:none;
   background: rgba(0, 0, 0, 0.7);
 }
 .works_modal_close {
-  z-index: 5;
+  z-index: 9999;
   position: absolute;
   top: 20%;
-  right: 60px;
+  right: 43px;
   color: #FFFFFF;
   font-size: 3rem;
   cursor: pointer;
